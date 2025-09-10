@@ -1,213 +1,137 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AveryNewPortfolio3</title>
+<style>
+  body{margin:0;background-color:whitesmoke;overflow-x:hidden}
+  *{box-sizing:border-box}
+  img,video{max-width:100%;height:auto;display:block}
+  #container{width:100%;padding-bottom:60px}
+  #home{width:100%;height:850px;background-color:red;margin-top:-400px;padding-top:370px}
+  .hometxt{font-family:Helvetica,Arial,sans-serif;font-weight:bold;mix-blend-mode:difference;color:#fff}
+  #name{width:100%;position:sticky;top:20px;text-align:center;margin-top:370px;padding-top:0;font-size:20px;mix-blend-mode:difference}
+  #name.is-fixed{position:fixed;top:0;left:0;right:0;margin-top:0;pointer-events:none}
+  #nametext{position:static;mix-blend-mode:difference;display:inline-block}
+  #othertwo{position:fixed;bottom:0;display:flex;justify-content:center;width:100%;padding-bottom:20px;font-size:20px;mix-blend-mode:difference}
+  #about{width:auto;left:20px;position:fixed}
+  #contact{width:auto;right:20px;position:fixed}
+  .projs{padding-top:20px;padding-left:20px;position:relative;width:100%}
+  .headerwork{font-family:Helvetica,Arial,sans-serif;color:#fff;font-weight:bold;font-size:20px;mix-blend-mode:difference;margin-bottom:20px}
+  .bigpg,.smallpg{font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:bold;color:#fff;mix-blend-mode:difference;margin:0 0 10px}
+  .mediumpg{font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:bold;color:#fff;mix-blend-mode:difference;width:100%;margin:0 0 0 -20px}
+  .bigpgdiv{margin-bottom:20px}
+  .bigvid{margin-right:20px;mix-blend-mode:difference;margin-bottom:5px;width:100%}
+  .bigimg{width:100%;mix-blend-mode:difference;margin-right:20px;padding-right:20px;margin-top:10px}
+  .vidsidebyside{width:100%;display:flex;padding-top:10px;align-items:flex-start;gap:0;margin:0 auto;padding-right:0;margin-left:0}
+  .vidsidebyside .bigimg{flex:0 0 70%;max-width:70%}
+  .vidsidebyside .mediumpgdiv{flex:0 0 30%;max-width:30%}
+  .imgtxtside{display:flex;align-items:flex-start;gap:0;margin:10px 0}
+  .imgtxtside img{width:100%;height:auto;display:block}
+  .imgtxtside>.littleimgleft,.imgtxtside>.littleimgright,.imgtxtside>.littlepgleft,.imgtxtside>.littlepgright{flex:0 0 50%;max-width:50%}
+  .smallpg{width:100%}
+  .littleimgleft,.littleimgright{margin-right:20px;mix-blend-mode:difference;margin-bottom:5px;width:100%}
+  .mediumpgdiv{height:100%}
+  #symboltryp{mix-blend-mode:difference;width:100%}
+  #reptryp{mix-blend-mode:difference;width:100%}
+  #typetryp{width:100%;display:block;mix-blend-mode:difference;margin-top:-10px}
+</style>
 </head>
-    <style>
-        body {
-            margin: 0;
-            background-color: whitesmoke;
-        }
-        #container {
-            width: 100%;
-            padding-bottom: 60px;
-        }
-        #home{
-            width: 100%;
-            height: 550px;
-            background-color: red;
-            margin-top: -400px;
-            padding-top: 370px;
-        }
-        .hometxt {
-            font-family: helvetica, arial, "sans-serif";
-            font-weight: bold;
-            mix-blend-mode: difference;
-            color: white;
-        }
-        #name {
-            width: 100%;
-            position: sticky;
-            top: 20px;
-            text-align: center;
-            margin-top: 370px;
-            padding-top: 0px;
-            font-size: 16px;
-            mix-blend-mode: difference;
-        }
-        #name.is-fixed{
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          margin-top: 0;
-          pointer-events: none;
-}
-        #nametext {
-            position: static;
-            mix-blend-mode: difference;
-            display: inline-block;
-        }
-        #othertwo {
-            position: fixed;
-            bottom: 0px;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            padding-bottom: 20px;
-            font-size: 16px;
-            mix-blend-mode: difference;
-        }
-        #about {
-            width: auto;
-            left: 20px;
-            position: fixed;
-        }
-        #contact {
-            width: auto;
-            right: 20px;
-            position: fixed;
-        }
-        #work {
-            justify-content: center;
-        }
-        .projs {
-            padding-top: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            position: relative;
-        }
-        .headerwork {
-            font-family: helvetica, arial, "sans-serif";
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            mix-blend-mode: difference;
-            margin-bottom: 20px;
-        }
-        .bigpg, .smallpg {
-            font-family: helvetica, arial, "sans-serif";
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-            mix-blend-mode: difference;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        .bigvid {
-            width: 100%;
-            margin-right: 20px;
-            mix-blend-mode: difference;
-            margin-top: 10px;
-            margin-bottom: 5px;
-            padding: 0;
-        }
-        .bigimg {
-            padding: 0;
-        }
-    </style>
 <body>
-    <div id="name">
-        <a id="nametext" class="hometxt">AVERY ROSE DOWD&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;GRAPHIC DESIGNER</a>
+  <div id="name">
+    <a id="nametext" class="hometxt">AVERY ROSE DOWD&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;GRAPHIC DESIGNER</a>
+  </div>
+  <div id="othertwo">
+    <div id="about">
+      <a id="abttext" class="hometxt">ABOUT</a>
     </div>
-    <div id="othertwo">
-        <div id="about">
-            <a id="abttext" class="hometxt">ABOUT</a>
-        </div>
-        <div id="instructions">
-            <a class="hometxt">SCROLL FOR WORK</a>
-        </div>
-        <div id="contact">
-            <a id="contacttext" class="hometxt">CONTACT</a>
-        </div>
+    <div id="instructions">
+      <a class="hometxt">SCROLL FOR WORK</a>
     </div>
-    <div id="container">
-        <div id="home">
-        </div>
-        <div id="work">
-            <div id="proj1" class="projs">
-                <div class="headerwork">
-                    <a class="headerwork">[01] Silenced Cinema Tryptich Series</a>
-                </div>
-                <div class="bigimg"><!--bigheroshot maybe remove--></div>
-                <div class="bigpg">
-                    <p class="bigpg">Silenced Cinema is a three day film festival in New York City showing films that are banned throughout the world. The event focuses on different topics such as language, race, sexual content, politics, and violence. Each tryptich focuses on the senses including: sight, speech, and sound.</p>
-                </div>
-                <div class="bigimg"><!--bigheroshot--></div>
-                <div class="littleimgleft"><!--smallzoominshot--></div>
-                <div class="littlepgright">
-                    <p class="smallpg">Typographic tryptich. Made by cutting up words to create different shapes and intriguing negative spaces. Focusing on the words said that are blocked from being shared.</p>
-                </div>
-                <div class="bigimg"><!--bigheroshot--></div>
-                <div class="littlepgleft">
-                    <p class="smallpg">Symbolism tryptich. Collage of people symbolising the people whose voices have been silenced by censoring media.</p>
-                </div>
-                <div class="littleimgright"><!--smallzoominshot--></div>
-                <div class="bigimg"><!--bigheroshot--></div>
-                <div class="littleimgleft"><!--smallzoominshot--></div>
-                <div class="littlepgright">
-                    <p class="smallpg">Repetition tryptich. The striking blue eye shows the things that we want to see that are torn away from our sight.</p>
-                </div>
-                <div class="bigimg"><video class="bigvid" src="InvertedSilencedCinemaVid.mp4" controls></video></div>
-                <div class="bigpg">
-                    <p class="bigpg">A short 30 second ad in addition to the tryptich series. Look closely as some information is not easily accessible similar to the stories that are unable to be shared.</p>
-                </div>
-            </div>
-            <div id="proj2" class="projs">
-                <div class="headerwork">
-                    <a class="headerwork">[02] Random Access Memories</a>
-                </div>
-            </div>
-            <div id="proj3" class="projs">
-                <div class="headerwork">
-                    <a class="headerwork">[03] New York Public Library Book</a>
-                </div>
-            </div>
-            <div id="proj4" class="projs">
-                <div class="headerwork">
-                    <a class="headerwork">[04] Perception + Language</a>
-                </div>
-            </div>
-            <div id="proj5" class="projs">
-                <div class="headerwork">
-                    <a class="headerwork">[05] NYBG Through Poetry</a>
-                </div>
-            </div>
-            <div id="proj6" class="projs">
-                <div class="headerwork">
-                    <a class="headerwork">[06] Buzzing Balance</a>
-                </div>
-                <div class="bigimg"><video class="bigvid" src="InvertedBuzzingBalanceVid.mp4" controls></video></div>
-                <div class="bigpg">
-                    <p class="bigpg">A digitally drawn animation created on Adobe After Effects speading the importance and imact of bees.</p>
-                </div>
-            </div>
-            <div id="proj7" class="projs">
-                <div class="headerwork">
-                    <a class="headerwork">[07] ROBERT Restaurant</a>
-                </div>
-            </div>
-            <div id="proj8" class="projs">
-                <div class="headerwork">
-                    <a class="headerwork">[08] MoMA Poster Series</a>
-                </div>
-            </div>
-            <div id="proj9" class="projs">
-                <div class="headerwork">
-                    <a class="headerwork">[09] Smoking Kills</a>
-                </div>
-                <div class="bigimg"><!--video--></div>
-                <div class="bigpg">
-                    <p class="bigpg">A short 30 second ad in addition to the tryptich series. Look closely as some information is not easily accessible similar to the stories that are unable to be heard through out the world.</p>
-                </div>
-            </div>
-            <div id="proj10" class="projs">
-                <div class="headerwork">
-                    <a class="headerwork">[10] My Personal Design Manifesto</a>
-                </div>
-            </div>
-        </div>
+    <div id="contact">
+      <a id="contacttext" class="hometxt">CONTACT</a>
     </div>
+  </div>
+  <div id="container">
+    <div id="home"></div>
+    <div id="work">
+      <div id="proj1" class="projs">
+        <div class="headerworkdiv">
+          <a class="headerwork">[01] Silenced Cinema Tryptich Series</a>
+        </div>
+        <div class="bigimg"></div>
+        <div class="bigpgdiv">
+          <p class="bigpg">Silenced Cinema is a three day film festival in New York City showing films that are banned throughout the world. The event focuses on different topics such as language, race, sexual content, politics, and violence. Each tryptich focuses on the senses including: sight, speech, and sound.</p>
+        </div>
+        <div class="bigimg"><img id="typetryp" src="InvertedTypeTryptic.jpg" alt=""></div>
+        <div class="bigimg"><img id="symboltryp" src="InvertedSymbolTryptic.jpg" alt=""></div>
+        <div class="bigimg"><img id="reptryp" src="InvertedRepititionTryptic.jpg" alt=""></div>
+        <div class="vidsidebyside">
+          <div class="bigimg"><video class="bigvid" src="InvertedSilencedCinemaVid.mp4" controls></video></div>
+          <div class="bigpgdiv">
+            <p class="mediumpg">A short 30 second advertisement in addition to the tryptich series. Look closely as some information is not easily accessible similar to the stories that are unable to be shared.</p>
+          </div>
+        </div>
+      </div>
+      <div id="proj2" class="projs">
+        <div class="headerworkdiv">
+          <a class="headerwork">[02] Random Access Memories</a>
+        </div>
+      </div>
+      <div id="proj3" class="projs">
+        <div class="headerworkdiv">
+          <a class="headerwork">[03] New York Public Library Book</a>
+        </div>
+      </div>
+      <div id="proj4" class="projs">
+        <div class="headerworkdiv">
+          <a class="headerwork">[04] Perception + Language</a>
+        </div>
+      </div>
+      <div id="proj5" class="projs">
+        <div class="headerworkdiv">
+          <a class="headerwork">[05] NYBG Through Poetry</a>
+        </div>
+      </div>
+      <div id="proj6" class="projs">
+        <div class="headerworkdiv">
+          <a class="headerwork">[06] Buzzing Balance</a>
+        </div>
+        <div class="vidsidebyside">
+          <div class="bigimg"><video class="bigvid" src="InvertedBuzzingBalanceVid.mp4" controls></video></div>
+          <div class="bigpgdiv">
+            <p class="mediumpg">A digitally drawn animation created on Adobe After Effects speading the importance and imact of bees.</p>
+          </div>
+        </div>
+      </div>
+      <div id="proj7" class="projs">
+        <div class="headerworkdiv">
+          <a class="headerwork">[07] ROBERT Restaurant</a>
+        </div>
+      </div>
+      <div id="proj8" class="projs">
+        <div class="headerworkdiv">
+          <a class="headerwork">[08] MoMA Poster Series</a>
+        </div>
+      </div>
+      <div id="proj9" class="projs">
+        <div class="headerworkdiv">
+          <a class="headerwork">[09] Smoking Kills</a>
+        </div>
+        <div class="vidsidebyside">
+          <div class="bigimg"><video class="bigvid" src="InvertedAntiSmokingVidmp4.mp4" controls></video></div>
+          <div class="bigpgdiv">
+            <p class="mediumpg">A short 30 second advertisement in addition to the tryptich series. Look closely as some information is not easily accessible similar to the stories that are unable to be heard through out the world.</p>
+          </div>
+        </div>
+      </div>
+      <div id="proj10" class="projs">
+        <div class="headerworkdiv">
+          <a class="headerwork">[10] My Personal Design Manifesto</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
