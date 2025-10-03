@@ -12,6 +12,11 @@
             background-color: hsla(0,0%,97%,0.1);
             overflow-x: hidden;
         }
+
+        a{
+            text-decoration: none;
+            color: initial;
+        }
         
         /*about*/
         #floating {
@@ -23,11 +28,18 @@
             font-size: 11px;
             line-height: 1.2;
             color: black;
+            z-index: 1000;
         }
         #myname {
             font-weight: 700;
             font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
             font-size: 24px;
+            width: 24px;
+        }
+        #myname:hover {
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-color: black;
         }
         #email {
             font-size: 11.5px;
@@ -62,14 +74,16 @@
 </head>
 
 <body>
-    
+
     <div id="floating">
-        <a id="myname" href="index.html">Avery Dowd</a><br><br><br>
+        
+        <a id="myname" href="./">Avery Dowd</a><br><br><br>
         <a id="email">averyrdowd@gmail.com</a><br>
         <a>[Resume/CV]</a>
         <br><br><br><br><br>
         <p id="intro">I am a graphic designer based in New York City. I completed my AAS in Communication Design in 2023 and am currently working toward my BFA in Graphic Design at the Fashion Institute of Technology. Alongside my design studies, I am pursuing a minor in the History of Art and French.<br><br>I am eager to contribute fresh ideas and create impactful work across both digital and print media. My interests span branding, typography, and editorial design, with professional experience designing menus, signage, and social media content for ROBERT Restaurant in Manhattan.<br><br><br><br></p>
     </div>
+    
     <div id="container">
         
         <div id="empty">
