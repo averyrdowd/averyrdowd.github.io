@@ -15,7 +15,7 @@
         
         /*about*/
         #floating {
-            width: 29%;
+            width: 28%;
             position: fixed;
             margin-left: 20px;
             margin-top: 13px;
@@ -64,6 +64,7 @@
         }
         .proj {
             margin-bottom: 15px;
+            cursor: pointer;
         }
         .projbelow {
             margin-top: 25px;
@@ -90,6 +91,13 @@
             font-size: 24px; 
             text-align: center;
         }
+        
+        .proj:hover .title {
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-color: black;
+        }
+        
         .type {
             flex: 0 2 20%;
             max-width: 20%;
@@ -117,11 +125,11 @@
 
 <body>
     <div id="floating">
-        <a id="myname">Avery Dowd</a><br><br><br>
+        <a id="myname" href="/">Avery Dowd</a><br><br><br>
         <a id="email">averyrdowd@gmail.com</a><br>
         <a>[Resume/CV]</a>
         <br><br><br><br><br>
-        <p id="intro">I am a graphic designer based in New York City. I completed my AAS in Communication Design in 2023 and am currently working toward my BFA in Graphic Design at the Fashion Institute of Technology. Alongside my design studies, I am pursuing a minor in the History of Art and French.<br><br>I am eager to contribute fresh ideas and create impactful work across both digital and print media. My interests span branding, typography, and editorial design, with professional experience designing menus, signage, and social media content for ROBERT Restaurant in Manhattan.<br><br><br><br></p>
+        <!--<p id="intro">I am a graphic designer based in New York City. I completed my AAS in Communication Design in 2023 and am currently working toward my BFA in Graphic Design at the Fashion Institute of Technology. Alongside my design studies, I am pursuing a minor in the History of Art and French.<br><br>I am eager to contribute fresh ideas and create impactful work across both digital and print media. My interests span branding, typography, and editorial design, with professional experience designing menus, signage, and social media content for ROBERT Restaurant in Manhattan.<br><br><br><br></p>-->
     </div>
     <div id="container">
         
@@ -131,14 +139,16 @@
         <div id="column1">
             
             <div class="proj">
+                <a href="/repetitiontriptych.html">
                 <div class="projimgdiv">
                     <img class="projimg" src="reptryptich.jpg">
                 </div>
                     <div class="projhead">
                         <a class="projnumber">Project 01:</a>
-                        <a class="title">Repetition Tryptich</a>
+                        <a class="title">Repetition Triptych</a>
                         <a class="type">Print</a>
                     </div>
+                </a>
             </div>
             
             <div class="proj projbelow">
@@ -147,7 +157,7 @@
                 </div>
                     <div class="projhead">
                         <a class="projnumber">Project 03:</a>
-                        <a class="title">Symbolism Tryptich</a>
+                        <a class="title">Symbolism Triptych</a>
                         <a class="type">Print</a>
                     </div>
             </div>
@@ -243,7 +253,7 @@
                 </div>
                     <div class="projhead">
                         <a class="projnumber">Project 04:</a>
-                        <a class="title">Typographic Tryptich</a>
+                        <a class="title">Typographic Triptych</a>
                         <a class="type">Print</a>
                     </div>
             </div>
@@ -294,7 +304,7 @@
                     </div>
             </div>
             
-            <!--if needed or have time
+            <!--if needed or have time also add moma posters
             <div class="proj projbelow">
                 <div class="projimgdiv">
                     <img class="projimg" src="escapegame.jpg">

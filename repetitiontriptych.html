@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Project 1</title>
+    
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+        
+        body{
+            margin: 0;
+            background-color: hsla(0,0%,97%,0.1);
+            overflow-x: hidden;
+        }
+        
+        /*about*/
+        #floating {
+            width: 28%;
+            position: fixed;
+            margin-left: 20px;
+            margin-top: 13px;
+            font-family: "Roboto Mono";
+            font-size: 11px;
+            line-height: 1.2;
+            color: black;
+        }
+        #myname {
+            font-weight: 700;
+            font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+            font-size: 24px;
+        }
+        #email {
+            font-size: 11.5px;
+        }
+        #intro {
+            font-size: 14px;
+            width: 85%;
+            font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+            font-weight: 700;
+        }
+        
+        /*columns*/
+        #container {
+            display: flex;
+            gap: 5px;
+            margin-right: -10px;
+            position: relative;
+        }
+        
+        /*work*/
+        #empty {
+            flex: 0 0 27%;
+            max-width: 27%;
+        }
+        #column1 {
+            flex: 0 1 73%;
+            max-width: 73%;
+            margin-top: 20px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    
+    <div id="floating">
+        <a id="myname" href="index.html">Avery Dowd</a><br><br><br>
+        <a id="email">averyrdowd@gmail.com</a><br>
+        <a>[Resume/CV]</a>
+        <br><br><br><br><br>
+        <p id="intro">I am a graphic designer based in New York City. I completed my AAS in Communication Design in 2023 and am currently working toward my BFA in Graphic Design at the Fashion Institute of Technology. Alongside my design studies, I am pursuing a minor in the History of Art and French.<br><br>I am eager to contribute fresh ideas and create impactful work across both digital and print media. My interests span branding, typography, and editorial design, with professional experience designing menus, signage, and social media content for ROBERT Restaurant in Manhattan.<br><br><br><br></p>
+    </div>
+    <div id="container">
+        
+        <div id="empty">
+        </div>
+        
+        <div id="column1">
+            <a>Hello World!</a>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
