@@ -2,144 +2,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, inital-scale=1.0">
 <title>Avery Dowd</title>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
-        
-        body{
-            margin: 0;
-            background-color: hsla(0,0%,97%,0.1);
-            overflow-x: hidden;
-        }
-
-        a{
-            text-decoration: none;
-            color: initial;
-        }
-        
-        /*about*/
-        #floating {
-            width: 28%;
-            position: fixed;
-            margin-left: 20px;
-            margin-top: 13px;
-            font-family: "Roboto Mono";
-            font-size: 11px;
-            line-height: 1.2;
-            color: black;
-        }
-        #myname {
-            font-weight: 700;
-            font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-            font-size: 24px;
-        }
-        #myname:hover {
-            text-decoration: underline;
-            text-decoration-style: solid;
-            text-decoration-color: black;
-        }
-        #email {
-            font-size: 11.5px;
-        }
-        #intro {
-            font-size: 14px;
-            width: 85%;
-            font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-            font-weight: 700;
-        }
-        
-        /*columns*/
-        #container {
-            display: flex;
-            gap: 5px;
-            margin-right: -10px;
-            position: relative;
-        }
-        
-        /*work*/
-        #empty {
-            flex: 0 0 27%;
-            max-width: 27%;
-        }
-        #column1 {
-            flex: 0 1 35%;
-            max-width: 35%;
-            margin-top: 20px;
-        }
-        #column2 {
-            flex: 0 1 35%;
-            max-width: 35%;
-            margin-top: 20px;
-        }
-        .proj {
-            margin-bottom: 15px;
-            cursor: pointer;
-        }
-        .projbelow {
-            margin-top: 25px;
-        }
-        
-        /*titles*/
-        .projhead {
-            display: flex;
-            align-items: center;
-        }
-        .projnumber {
-            flex: 0 0 20%;
-            max-width: 20%;
-            font-family: "Roboto Mono";
-            font-size: 14px;
-            margin-left: 5px;
-            /*margin-top: -3px;*/
-        }
-        .title {
-            flex: 0 1 60%;
-            max-width: 60%;
-            font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-            font-weight: 700;
-            font-size: 24px; 
-            text-align: center;
-        }
-        
-        .proj:hover .title {
-            text-decoration: underline;
-            text-decoration-style: solid;
-            text-decoration-color: black;
-        }
-        
-        .type {
-            flex: 0 2 20%;
-            max-width: 20%;
-            font-family: "Roboto Mono";
-            font-size: 11px;
-            text-align: right;
-            margin-right: 10px;
-            /*margin-top: -6px;*/
-        }
-        
-        /*images*/
-        .projimgdiv {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-        .projimg {
-            width: 100%;
-            height: 100%;
-        }
-        
-    </style>
+<link rel="stylesheet" href="style.css">
     
 </head>
 
 <body>
     <div id="floating">
-        <a id="myname" href="/index.html">Avery Dowd</a><br><br><br>
-        <a id="email">averyrdowd@gmail.com</a><br>
+        <a class="myname" href="/index.html">Avery Dowd</a><br><br>
+        <a class="email">averyrdowd@gmail.com</a><br><br>
         <a>[Resume/CV]</a>
-        <br><br><br><br><br>
-        <!--<p id="intro">I am a graphic designer based in New York City. I completed my AAS in Communication Design in 2023 and am currently working toward my BFA in Graphic Design at the Fashion Institute of Technology. Alongside my design studies, I am pursuing a minor in the History of Art and French.<br><br>I am eager to contribute fresh ideas and create impactful work across both digital and print media. My interests span branding, typography, and editorial design, with professional experience designing menus, signage, and social media content for ROBERT Restaurant in Manhattan.<br><br><br><br></p>-->
+        <br><br><br><br><br><br><br><br>
+        <p class="intro"><br><br>I am a graphic designer based in New York City. 
+            I completed my AAS in Communication Design in 2023 and am currently working toward my BFA in Graphic Design at the Fashion Institute of Technology. 
+            Alongside my design studies, I am pursuing a minor in the History of Art and French.<br><br> 
+            My interests span branding, typography, and editorial design, with professional experience designing menus, signage, and social media content for ROBERT Restaurant in Manhattan.
+            I am eager to contribute fresh ideas and create impactful work across both digital and print media.<br><br><br><br></p>
     </div>
     <div id="container">
         
@@ -174,7 +54,7 @@
             
             <div class="proj projbelow">
                 <div class="projimgdiv">
-                    <img class="projimg" src="images/typebookplaceholder.jpg">
+                    <img class="projimg" src="images/BrailleBook.gif">
                 </div>
                     <div class="projhead">
                         <a class="projnumber">Project 05:</a>
@@ -185,11 +65,11 @@
             
             <div class="proj projbelow">
                 <div class="projimgdiv">
-                    <img class="projimg" src="images/nybgfront.jpg">
+                    <img class="projimg" src="images/NYPLBook.jpg">
                 </div>
                     <div class="projhead">
                         <a class="projnumber">Project 07:</a>
-                        <a class="title">NYBG Through Poetry</a>
+                        <a class="title">Inside the NYPL</a>
                         <a class="type">Book</a>
                     </div>
             </div>
@@ -270,11 +150,11 @@
             
             <div class="proj projbelow">
                 <div class="projimgdiv">
-                    <img class="projimg" src="images/NYPLPreview.jpg">
+                    <img class="projimg" src="images/NYBGBook.jpg">
                 </div>
                     <div class="projhead">
                         <a class="projnumber">Project 06:</a>
-                        <a class="title">Inside the NYPL</a>
+                        <a class="title">NYBG Through Poetry</a>
                         <a class="type">Book</a>
                     </div>
             </div>
