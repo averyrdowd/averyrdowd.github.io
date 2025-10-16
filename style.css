@@ -53,7 +53,9 @@ video::-webkit-media-controls-fullscreen-button {
         .myname {
             font-weight: 650;
             font-family: "Instrument Sans", Arial, "sans-serif";
-            font-size: 58px;
+            /* font-size: 58px; */
+            font-size: 50px;
+            width: 85%;
         }
         .myname:hover {
             text-decoration: underline;
@@ -227,31 +229,60 @@ video::-webkit-media-controls-fullscreen-button {
 
         @media (max-width: 684px) {
             #floating {
+                max-width: 100%;
                 width: 100%;
                 position: relative;
+                margin-left: 10px;
+            }
+            .intro {
+                width: 95%;
+                font-size: 13px;
             }
             #empty {
                 flex: 0 0 0;
-                width: 0;
+                max-width: 0;
             }
             #column1 {
-                flex: 0 0 50%;
-                width: 50%;
+                flex: 0 1 46%;
+                max-width: 46%;
             }
             #column2 {
-                flex: 0 1 50%;
-                width: 50%;
+                flex: 0 2 46%;
+                max-width: 46%;
             }
             #container {
                 width: 100%;
+                display: flex;
+                margin-left: 0px;
+                margin-right: 5px;
+                padding-left: 0px;
+                padding-right: 5px;
+                gap: 13px;
             }
             .type {
                 font-size: 8px;
+                margin-top: -10px;
             }
             .title {
                 font-size: 16px;
+                height: 40px;
+                margin-top: 10px;
             }
             .projnumber {
                 font-size: 10px;
+            }
+            .projectdescription {
+                width: 95%;
+                font-size: 13px;
+            }
+            .email {
+                font-size: 10px;
+            }
+            .columnonly {
+                flex: 0 1 95%;
+                max-width: 95%;
+            }
+            .spreadbutside {
+                width: 95%;
             }
         }
