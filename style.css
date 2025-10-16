@@ -224,3 +224,34 @@ video::-webkit-media-controls-fullscreen-button {
             height: 100%;
             flex: 0 1 50%;
         }
+
+        @media (max-width: 684px) {
+            #floating {
+                width: 100%;
+                position: relative;
+            }
+            #empty {
+                flex: 0 0 0;
+                width: 0;
+            }
+            #column1 {
+                flex: 0 0 50%;
+                width: 50%;
+            }
+            #column2 {
+                flex: 0 1 50%;
+                width: 50%;
+            }
+            #container {
+                width: 100%;
+            }
+            .type {
+                font-size: 8px;
+            }
+            .title {
+                font-size: 16px;
+            }
+            .projnumber {
+                font-size: 10px;
+            }
+        }
