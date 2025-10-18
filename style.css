@@ -62,8 +62,12 @@ video::-webkit-media-controls-fullscreen-button {
             text-decoration-style: solid;
             text-decoration-color: black;
         }
+        .myname:hover ~ .me{
+            opacity: 100%;
+        }
         .email {
             font-size: 12.5px;
+            z-index: 10000;
         }
         .intro {
             font-size: 16px;
@@ -72,6 +76,15 @@ video::-webkit-media-controls-fullscreen-button {
             font-weight: 650;
             line-height: 1.15;
             margin-top: 12px;
+        }
+        .intro:hover {
+            cursor: default;
+        }
+        .me {
+            width: 80%;
+            height: auto;
+            opacity: 0%;
+            z-index: 1;
         }
         
         /*columns*/
@@ -182,8 +195,8 @@ video::-webkit-media-controls-fullscreen-button {
 
         /*sep pages only column*/
         .columnonly {
-            flex: 0 1 70%;
-            max-width: 70%;
+            flex: 0 1 70.5%;
+            max-width: 70.5%;
             margin-top: 25px;
             align-items: flex-start;
         }
@@ -198,18 +211,18 @@ video::-webkit-media-controls-fullscreen-button {
             width: 100%;
             height: auto;
             align-items: left;
-            flex: 0 0 50%;
+            flex: 0 0 48%;
         }
         .indtryp .single {
-            width: 50%;
+            width: 49%;
             height: auto;
             margin: 0;
         }
         .logo {
-            width: 50%;
-            height: 50%;
+            width: 49%;
+            height: 100%;
             margin: 0;
-            flex: 0 1 50%;
+            flex: 0 1 49%;
         }
         .smallvid {
             width: 50%;
@@ -226,6 +239,64 @@ video::-webkit-media-controls-fullscreen-button {
             height: 100%;
             flex: 0 1 50%;
         }
+
+        /*menus specific*/
+        .tindtryp .single {
+            width: 49%;
+            height: auto;
+            margin: 0;
+        }
+        .tindtryp {
+            padding-bottom: 25px;
+            display: flex;
+            gap: 20px;
+        }
+        .tprojimgdiv {
+            width: 100%;
+            position: relative;
+            padding-bottom: 25px;
+        }
+        
+        /*slider*/
+        .slider {
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+img .slide {
+  object-fit: contain;
+  object-position: center !important;
+}
+
+.slide.active {
+  display: block;
+  animation: fade 0.8s ease-in-out;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #ccc; /* light grey */
+  font-family: "Roboto Mono", monospace;
+  font-size: 36px;
+  cursor: pointer;
+  padding: 0 10px;
+  transition: color 0.2s ease;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
 
         @media (max-width: 684px) {
             #floating {
@@ -284,5 +355,8 @@ video::-webkit-media-controls-fullscreen-button {
             }
             .spreadbutside {
                 width: 95%;
+            }
+            .myname {
+                font-size: 71px;
             }
         }
