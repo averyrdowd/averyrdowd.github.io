@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Project 1</title>
+    
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+<style>
+     @media (max-width: 684px) {
+            #floating {
+                max-width: 100%;
+                width: 100%;
+                position: relative;
+                margin-left: 10px;
+            }
+            .intro {
+                width: 95%;
+                font-size: 13px;
+            }
+            #empty {
+                flex: 0 0 0;
+                max-width: 0;
+            }
+            #column1 {
+                flex: 0 1 46%;
+                max-width: 46%;
+            }
+            #column2 {
+                flex: 0 2 46%;
+                max-width: 46%;
+            }
+            #container {
+                width: 100%;
+                display: flex;
+                margin-left: 0px;
+                margin-right: 5px;
+                padding-left: 0px;
+                padding-right: 5px;
+                gap: 13px;
+            }
+            .type {
+                font-size: 8px;
+                margin-top: -10px;
+            }
+            .title {
+                font-size: 16px;
+                height: 40px;
+                margin-top: 10px;
+            }
+            .projnumber {
+                font-size: 10px;
+            }
+            .projectdescription {
+                width: 95%;
+                font-size: 13px;
+            }
+            .email {
+                font-size: 10px;
+            }
+            .columnonly {
+                flex: 0 1 95%;
+                max-width: 95%;
+            }
+            .spreadbutside {
+                width: 95%;
+            }
+            .myname {
+                font-size: 71px;
+            }
+        }
+        </style>
+    
+</head>
+
+<body>
+
+    <div id="floating">
+        
+        <a class="myname" href="./">Avery R. Dowd</a><br><br>
+        <a class="email">averyrdowd@gmail.com</a><br><br>
+        <a href="images/AveryDowdResume.pdf" download>[Resume/CV]</a>
+        <br><br><br><br><br>
+        <a class="numberpg">Project 10:</a><br>
+        <div class="spreadbutside">
+        <a class="titlepg">ROBERT Instagram</a>
+        <a class="typepg">Print</a>
+        </div>
+        <p class="projectdescription"><br><br>ROBERT Restaurant needed a social media manager for Summer 2024.
+            My two collegues and I took over and collaborated with photography, videography, and technology.
+            <br><br>
+            Followers increased by 15% over 3 months and interactions / likes grew as well.
+            Guests would join us mentioning they enjoyed our social media presence and wanted to experience it themselves.
+        </p>
+    </div>
+    
+    <div id="container">
+        
+        <div id="empty">
+        </div>
+        
+        <div class="columnonly">
+            <div class="tindtryp">
+                <video class="smallvid" src="images/burrattacompressed.mp4" controls></video>
+                <video class="smallvid" src="images/mewalkingcompressed.mp4" controls></video>
+            </div>
+            <div class="projimgdiv">
+                    <img class="projimg" src="images/peaches.jpg">
+            </div>
+            <div class="indtryp">
+                <img class="single" src="images/salmon.jpg">
+                <img class="logo" src="images/horsdovres.jpg">
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
