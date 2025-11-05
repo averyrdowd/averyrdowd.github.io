@@ -19,24 +19,8 @@
             color: initial;        
         }
 
-        video {
-            accent-color: #EEEEEE;
-        }
-        video::-webkit-media-controls-panel {
-  background: linear-gradient(
-    to top,
-    rgba(238, 238, 238, 0),
-    rgba(238, 238, 238, 0),
-     rgba(238, 238, 238, 0),
-    rgba(238, 238, 238, 0)
-  ) !important;                         
-}
         
-video::-webkit-media-controls-play-button,
-video::-webkit-media-controls-mute-button,
-video::-webkit-media-controls-fullscreen-button {
-  filter: brightness(1);
-}
+        
         
         /*about*/
         #floating {
