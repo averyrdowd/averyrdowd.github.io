@@ -73,7 +73,7 @@ video::-webkit-media-controls-fullscreen-button {
             font-size: 16px;
             width: 85%;
             font-family: "Instrument Sans", Arial, "sans-serif";
-            font-weight: 650;
+            font-weight: 500;
             line-height: 1.15;
             margin-top: 12px;
         }
@@ -188,7 +188,7 @@ video::-webkit-media-controls-fullscreen-button {
             font-size: 16px;
             width: 84%;
             font-family: "Instrument Sans", Arial, "sans-serif";
-            font-weight: 650;
+            font-weight: 500;
             line-height: 1.15;
             margin: 5px 0 0 0;
         }
