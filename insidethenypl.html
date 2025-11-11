@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Avery R. Dowd</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="top">
+            <div id="name">
+                <p href="./" id="nametxt">Avery R. Dowd</p>
+            </div>
+            <div id="title">
+                <p id="titletxt">Inside the NYPL</p>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="navigation">
+                <div id="contact">
+                    <a id="email">averyrdowd@gmail.com</a>
+                    <a href="" id="resume" download>[Resume/CV]</a>
+                </div>
+                <div id="navbtns">
+                    <a href="./" id="home">Home</a>
+                    <a href="/gallery.html" id="gallery">Gallery</a>
+                    <div id="projectsToggle">
+                        <button id="projects" type="button" aria-expanded="false" aria-controls="projectsDropdown">
+                            Projects
+                            <img id="dropdown" src="images/dropdown.svg" alt="">
+                        </button>
+                    </div>
+                    <div id="projectsDropdown" class="projects-dropdown" hidden>
+                        <a href="/repetitiontriptych.html" id="proj1" class="allproj">Repetition Triptych</a>
+                        <a href="/symbolismtriptych.html" id="proj2" class="allproj">Symbolism Triptych</a>
+                        <a href="/typographytriptych.html" id="proj3" class="allproj">Typography Triptych</a>
+                        <a href="/silencedcinema.html" id="proj4" class="allproj">Silenced Cinema Ad</a>
+                        <a href="/languageandperception.html" id="proj5" class="allproj">Language and Perception</a>
+                        <a href="/nybgthroughpoetry.html" id="proj6" class="allproj">NYBG Through Poetry</a>
+                        <a href="/insidethenypl.html" id="proj7" class="allproj">Inside the NYPL</a>
+                        <a href="/robertmenus.html" id="proj8" class="allproj">ROBERT Menus</a>
+                        <a href="/robertinstagram.html" id="proj9" class="allproj">ROBERT Instagram</a>
+                        <a href="/smokingkills.html" id="proj10" class="allproj">Smoking Kills</a>
+                        <a href="/buzzingbalance.html" id="proj11" class="allproj">Buzzing Balance</a>
+                        <a href="/albumcover.html" id="proj12" class="allproj">Album Cover</a>
+                    </div>
+                </div>
+            </div>
+            <div id="info">
+                <p id="infotxt"> After exploring New York City, three libraries were selected to create books on. Each book had to explore a topic that was found in the library or related to the library.
+                    <br>
+                    <br>
+                Many consider the New York Public Library as more of a tourist attraction than a place to work or study. It's often loud, unfriendly, and way too busy. New Yorkers who go in search of books or librarian assistance are typically sent away elsewhere. Curious to learn what other peoples experiences were with this institute, 15 users were surveyed. The results gathered were turned into infographics throughout the book.                
+                </p>
+            </div>
+            <div id="imageplaceholder">
+            </div>
+        </div>
+    </div>
+    <div id="scroll">
+        <div id="txtplaceholder"></div>
+        <div id="imagelive" class="fullimg slider">
+            <div class="slides">
+                <img src="images/NYPLScans/NYPL1.jpg" class="slide active" alt="Inside the NYPL spread 1">
+                <img src="images/NYPLScans/NYPL2.jpg" class="slide" alt="Inside the NYPL spread 2">
+                <img src="images/NYPLScans/NYPL3.jpg" class="slide" alt="Inside the NYPL spread 3">
+                <img src="images/NYPLScans/NYPL4.jpg" class="slide" alt="Inside the NYPL spread 4">
+                <img src="images/NYPLScans/NYPL5.jpg" class="slide" alt="Inside the NYPL spread 5">
+                <img src="images/NYPLScans/NYPL6.jpg" class="slide" alt="Inside the NYPL spread 6">
+                <img src="images/NYPLScans/NYPL7.jpg" class="slide" alt="Inside the NYPL spread 7">
+                <img src="images/NYPLScans/NYPL8.jpg" class="slide" alt="Inside the NYPL spread 8">
+                <img src="images/NYPLScans/NYPL9.jpg" class="slide" alt="Inside the NYPL spread 9">
+                <img src="images/NYPLScans/NYPL10.jpg" class="slide" alt="Inside the NYPL spread 10">
+            </div>
+            <button class="prev" type="button" aria-label="Previous slide">&#10094;</button>
+            <button class="next" type="button" aria-label="Next slide">&#10095;</button>
+        </div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/nyplzoom4.jpg" alt="Typography Triptych full poster">
+        </div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/nyplzoom2.jpg" alt="Typography Triptych full poster">
+        </div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/nyplzoom5.jpg" alt="Typography Triptych full poster">
+        </div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/nyplzoom1.jpg" alt="Typography Triptych full poster">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('projects');
+            const dropdown = document.getElementById('projectsDropdown');
+            if (toggleButton && dropdown) {
+                const path = window.location.pathname;
+                const onIndex = /\/(?:index\.html)?$/.test(path);
+                if (!onIndex) {
+                    dropdown.classList.add('is-open');
+                    dropdown.hidden = false;
+                    toggleButton.setAttribute('aria-expanded', 'true');
+                    toggleButton.classList.add('is-open');
+                }
+
+                toggleButton.addEventListener('click', function () {
+                    const isOpen = dropdown.classList.toggle('is-open');
+                    dropdown.hidden = !isOpen;
+                    toggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    toggleButton.classList.toggle('is-open', isOpen);
+                });
+            }
+
+            const slider = document.querySelector('.slider');
+            if (!slider) {
+                return;
+            }
+
+            const slides = slider.querySelectorAll('.slide');
+            const prevBtn = slider.querySelector('.prev');
+            const nextBtn = slider.querySelector('.next');
+            if (!slides.length || !prevBtn || !nextBtn) {
+                return;
+            }
+
+            let current = 0;
+            const total = slides.length;
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+            }
+
+            nextBtn.addEventListener('click', function () {
+                current = (current + 1) % total;
+                showSlide(current);
+            });
+
+            prevBtn.addEventListener('click', function () {
+                current = (current - 1 + total) % total;
+                showSlide(current);
+            });
+        });
+    </script>
+</body>
+</html>

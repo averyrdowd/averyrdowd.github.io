@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Avery R. Dowd</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="top">
+            <div id="name">
+                <p href="./" id="nametxt">Avery R. Dowd</p>
+            </div>
+            <div id="title">
+                <p id="titletxt">ROBERT Instagram</p>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="navigation">
+                <div id="contact">
+                    <a id="email">averyrdowd@gmail.com</a>
+                    <a href="" id="resume" download>[Resume/CV]</a>
+                </div>
+                <div id="navbtns">
+                    <a href="./" id="home">Home</a>
+                    <a href="/gallery.html" id="gallery">Gallery</a>
+                    <div id="projectsToggle">
+                        <button id="projects" type="button" aria-expanded="false" aria-controls="projectsDropdown">
+                            Projects
+                            <img id="dropdown" src="images/dropdown.svg" alt="">
+                        </button>
+                    </div>
+                    <div id="projectsDropdown" class="projects-dropdown" hidden>
+                        <a href="/repetitiontriptych.html" id="proj1" class="allproj">Repetition Triptych</a>
+                        <a href="/symbolismtriptych.html" id="proj2" class="allproj">Symbolism Triptych</a>
+                        <a href="/typographytriptych.html" id="proj3" class="allproj">Typography Triptych</a>
+                        <a href="/silencedcinema.html" id="proj4" class="allproj">Silenced Cinema Ad</a>
+                        <a href="/languageandperception.html" id="proj5" class="allproj">Language and Perception</a>
+                        <a href="/nybgthroughpoetry.html" id="proj6" class="allproj">NYBG Through Poetry</a>
+                        <a href="/insidethenypl.html" id="proj7" class="allproj">Inside the NYPL</a>
+                        <a href="/robertmenus.html" id="proj8" class="allproj">ROBERT Menus</a>
+                        <a href="/robertinstagram.html" id="proj9" class="allproj">ROBERT Instagram</a>
+                        <a href="/smokingkills.html" id="proj10" class="allproj">Smoking Kills</a>
+                        <a href="/buzzingbalance.html" id="proj11" class="allproj">Buzzing Balance</a>
+                        <a href="/albumcover.html" id="proj12" class="allproj">Album Cover</a>
+                    </div>
+                </div>
+            </div>
+            <div id="info">
+                <p id="infotxt">ROBERT Restaurant needed a new Instagram presence. Working with two colleagues, the Instagram was given a new photography, videography, and technology perspective.
+                    <br>
+                    <br>
+                    Followers increased by 15% over 3 months and interactions / likes grew as well. Guests regularly visited the restaurant remarking on seeing the new social media posts which drew them in.
+                </p>
+            </div>
+            <div id="imageplaceholder">
+            </div>
+        </div>
+    </div>
+    <div id="scroll">
+        <div id="txtplaceholder"></div>
+        <div class="halfimg-row instarow">
+            <div class="halfimg">
+                <a class="halfimg-link">
+                    <img src="images/salmon.jpg" alt="Typography Triptych full poster">
+                </a>
+            </div>
+            <div class="halfimg">
+                <a class="halfimg-link">
+                    <img src="images/rigatoni.jpg" alt="Typography Triptych full poster">
+                </a>
+            </div>
+        </div>
+        <div class="halfimg-row instarow">
+            <div class="halfimg">
+                <a class="halfimg-link">
+                    <div class="video-wrapper">
+                        <video class="insta-video" src="images/MeOnInstaCompressed.mp4" autoplay loop muted playsinline></video>
+                        <button class="mute-toggle" type="button" aria-pressed="true">Muted</button>
+                    </div>
+                </a>
+            </div>
+            <div class="halfimg">
+                <a class="halfimg-link">
+                    <img src="images/pannacotta2.jpg" alt="Typography Triptych full poster">
+                </a>
+            </div>
+        </div>
+        <div class="halfimg-row instarow">
+            <div class="halfimg">
+                <a class="halfimg-link">
+                    <img src="images/chickensandwich.jpg" alt="Typography Triptych full poster">
+                </a>
+            </div>
+            <div class="halfimg">
+                <a class="halfimg-link">
+                    <img src="images/cheeseplate.jpg" alt="Typography Triptych full poster">
+                </a>
+            </div>
+        </div>
+        <div class="halfimg-row instarow">
+            <div class="halfimg">
+                <a class="halfimg-link">
+                    <img src="images/moltencake.jpg" alt="Typography Triptych full poster">
+                </a>
+            </div>
+            <div class="halfimg">
+                <a class="halfimg-link">
+                    <div class="video-wrapper">
+                        <video class="insta-video" src="images/BurattaInstaCompressed.mp4" autoplay loop muted playsinline></video>
+                        <button class="mute-toggle" type="button" aria-pressed="true">Muted</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('projects');
+            const dropdown = document.getElementById('projectsDropdown');
+            if (toggleButton && dropdown) {
+                const path = window.location.pathname;
+                const onIndex = /\/(?:index\.html)?$/.test(path);
+                if (!onIndex) {
+                    dropdown.classList.add('is-open');
+                    dropdown.hidden = false;
+                    toggleButton.setAttribute('aria-expanded', 'true');
+                    toggleButton.classList.add('is-open');
+                }
+
+                toggleButton.addEventListener('click', function () {
+                    const isOpen = dropdown.classList.toggle('is-open');
+                    dropdown.hidden = !isOpen;
+                    toggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    toggleButton.classList.toggle('is-open', isOpen);
+                });
+            }
+
+            document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+                const video = wrapper.querySelector('.insta-video');
+                const button = wrapper.querySelector('.mute-toggle');
+                if (!video || !button) {
+                    return;
+                }
+
+                const updateButton = () => {
+                    const isMuted = video.muted;
+                    button.textContent = isMuted ? 'Muted' : 'Sound';
+                    button.setAttribute('aria-pressed', (!isMuted).toString());
+                };
+
+                updateButton();
+
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    video.muted = !video.muted;
+                    if (!video.muted) {
+                        video.play().catch(() => {
+                            video.muted = true;
+                        });
+                    }
+                    updateButton();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

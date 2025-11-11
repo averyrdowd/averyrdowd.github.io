@@ -2,119 +2,108 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Project 1</title>
-    
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<title>Avery R. Dowd</title>
 
-<style>
-     @media (max-width: 684px) {
-            #floating {
-                max-width: 100%;
-                width: 100%;
-                position: relative;
-                margin-left: 10px;
-            }
-            .intro {
-                width: 95%;
-                font-size: 13px;
-            }
-            #empty {
-                flex: 0 0 0;
-                max-width: 0;
-            }
-            #column1 {
-                flex: 0 1 46%;
-                max-width: 46%;
-            }
-            #column2 {
-                flex: 0 2 46%;
-                max-width: 46%;
-            }
-            #container {
-                width: 100%;
-                display: flex;
-                margin-left: 0px;
-                margin-right: 5px;
-                padding-left: 0px;
-                padding-right: 5px;
-                gap: 13px;
-            }
-            .type {
-                font-size: 8px;
-                margin-top: -10px;
-            }
-            .title {
-                font-size: 16px;
-                height: 40px;
-                margin-top: 10px;
-            }
-            .projnumber {
-                font-size: 10px;
-            }
-            .projectdescription {
-                width: 95%;
-                font-size: 13px;
-            }
-            .email {
-                font-size: 10px;
-            }
-            .columnonly {
-                flex: 0 1 95%;
-                max-width: 95%;
-            }
-            .spreadbutside {
-                width: 95%;
-            }
-            .myname {
-                font-size: 71px;
-            }
-        }
-        </style>
-    
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
 </head>
 
 <body>
-
-    <div id="floating">
-        
-        <a class="myname" href="./">Avery R. Dowd</a><br><br>
-        <a class="email">averyrdowd@gmail.com</a><br><br>
-        <a href="images/AveryDowdResume.pdf" download>[Resume/CV]</a>
-        <br><br><br><br><br>
-        <a class="numberpg">Project 12:</a><br>
-        <div class="spreadbutside">
-        <a class="titlepg">Album Cover</a>
-        <a class="typepg">Typography</a>
-        </div>
-        <p class="projectdescription"><br><br>After listening to the album Random Access Memories by Daft Punk, I was inspired to create a sci-fi modern font.
-            I created a grid and laid out each letter creating a typeface.<br><br>
-            To take it a step further, a vinyl and cover were created.
-            Although Daft Punk has a upbeat electronic sound, their lyrics are quite sad and romantic like in Instant Crush.
-            After listening on repeat, I tried to incorporate the type in a new way by hand sewing the letters into paper.
-            I followed the typeface translating it into stitches creating the cover.
-        </p>
-    </div>
-    
     <div id="container">
-        
-        <div id="empty">
-        </div>
-        
-        <div class="columnonly">
-            <div class="projimgdiv">
-                <img class="projimg" src="images/typeface.jpg">
+        <div id="top">
+            <div id="name">
+                <p href="./" id="nametxt">Avery R. Dowd</p>
             </div>
-            <div class="projimgdiv">
-                <img class="projimg" src="images/bothcovertogether.jpg">
-            </div>
-            <div class="indtryp">
-                <img class="single" src="images/frontalbum.jpg">
-                <img class="logo" src="images/backalbum.jpg">
+            <div id="title">
+                <p id="titletxt">Album Cover</p>
             </div>
         </div>
-        
+        <div id="bottom">
+            <div id="navigation">
+                <div id="contact">
+                    <a id="email">averyrdowd@gmail.com</a>
+                    <a href="" id="resume" download>[Resume/CV]</a>
+                </div>
+                <div id="navbtns">
+                    <a href="./" id="home">Home</a>
+                    <a href="/gallery.html" id="gallery">Gallery</a>
+                    <div id="projectsToggle">
+                        <button id="projects" type="button" aria-expanded="false" aria-controls="projectsDropdown">
+                            Projects
+                            <img id="dropdown" src="images/dropdown.svg" alt="">
+                        </button>
+                    </div>
+                    <div id="projectsDropdown" class="projects-dropdown" hidden>
+                        <a href="/repetitiontriptych.html" id="proj1" class="allproj">Repetition Triptych</a>
+                        <a href="/symbolismtriptych.html" id="proj2" class="allproj">Symbolism Triptych</a>
+                        <a href="/typographytriptych.html" id="proj3" class="allproj">Typography Triptych</a>
+                        <a href="/silencedcinema.html" id="proj4" class="allproj">Silenced Cinema Ad</a>
+                        <a href="/languageandperception.html" id="proj5" class="allproj">Language and Perception</a>
+                        <a href="/nybgthroughpoetry.html" id="proj6" class="allproj">NYBG Through Poetry</a>
+                        <a href="/insidethenypl.html" id="proj7" class="allproj">Inside the NYPL</a>
+                        <a href="/robertmenus.html" id="proj8" class="allproj">ROBERT Menus</a>
+                        <a href="/robertinstagram.html" id="proj9" class="allproj">ROBERT Instagram</a>
+                        <a href="/smokingkills.html" id="proj10" class="allproj">Smoking Kills</a>
+                        <a href="/buzzingbalance.html" id="proj11" class="allproj">Buzzing Balance</a>
+                        <a href="/albumcover.html" id="proj12" class="allproj">Album Cover</a>
+                    </div>
+                </div>
+            </div>
+            <div id="info">
+                <p id="infotxt">Random Access Memories is an album by Daft Punk with songs about love and friendship with an upbeat, techno energy. The current album cover shows imagery of their iconic helmets delving into the aesthetics of the music.
+                    <br>
+                    <br>
+                    After listening to the album, specifically Instant Crush, a straight edged futuristic type face was designed. As a way to break away from the energy of the music in a different perspective, the underlying message of love lost in the song was shown through this cover. Rather than a digital approach, the type was repourposed into stitching on a collage cover showing people close but separated from their partners.
+                </p>
+                </div>
+            <div id="imageplaceholder">
+            </div>
+        </div>
     </div>
-    
+    <div id="scroll">
+        <div id="txtplaceholder"></div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/frontalbum.jpg" alt="Symbolism Triptych full poster">
+        </div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/lonefrontcover.jpg" alt="Symbolism Triptych full poster">
+        </div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/backalbum.jpg" alt="Symbolism Triptych full poster">
+        </div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/lonebackcover.jpg" alt="Symbolism Triptych full poster">
+        </div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/typeface.jpg" alt="Symbolism Triptych full poster">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('projects');
+            const dropdown = document.getElementById('projectsDropdown');
+            if (!toggleButton || !dropdown) {
+                return;
+            }
+
+            const path = window.location.pathname;
+            const onIndex = /\/(?:index\.html)?$/.test(path);
+            if (!onIndex) {
+                dropdown.classList.add('is-open');
+                dropdown.hidden = false;
+                toggleButton.setAttribute('aria-expanded', 'true');
+                toggleButton.classList.add('is-open');
+            }
+
+            toggleButton.addEventListener('click', function () {
+                const isOpen = dropdown.classList.toggle('is-open');
+                dropdown.hidden = !isOpen;
+                toggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                toggleButton.classList.toggle('is-open', isOpen);
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Avery R. Dowd</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="top">
+            <div id="name">
+                <p href="./" id="nametxt">Avery R. Dowd</p>
+            </div>
+            <div id="title">
+                <p id="titletxt">Symbolism Triptych</p>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="navigation">
+                <div id="contact">
+                    <a id="email">averyrdowd@gmail.com</a>
+                    <a href="" id="resume" download>[Resume/CV]</a>
+                </div>
+                <div id="navbtns">
+                    <a href="./" id="home">Home</a>
+                    <a href="/gallery.html" id="gallery">Gallery</a>
+                    <div id="projectsToggle">
+                        <button id="projects" type="button" aria-expanded="false" aria-controls="projectsDropdown">
+                            Projects
+                            <img id="dropdown" src="images/dropdown.svg" alt="">
+                        </button>
+                    </div>
+                    <div id="projectsDropdown" class="projects-dropdown" hidden>
+                        <a href="/repetitiontriptych.html" id="proj1" class="allproj">Repetition Triptych</a>
+                        <a href="/symbolismtriptych.html" id="proj2" class="allproj">Symbolism Triptych</a>
+                        <a href="/typographytriptych.html" id="proj3" class="allproj">Typography Triptych</a>
+                        <a href="/silencedcinema.html" id="proj4" class="allproj">Silenced Cinema Ad</a>
+                        <a href="/languageandperception.html" id="proj5" class="allproj">Language and Perception</a>
+                        <a href="/nybgthroughpoetry.html" id="proj6" class="allproj">NYBG Through Poetry</a>
+                        <a href="/insidethenypl.html" id="proj7" class="allproj">Inside the NYPL</a>
+                        <a href="/robertmenus.html" id="proj8" class="allproj">ROBERT Menus</a>
+                        <a href="/robertinstagram.html" id="proj9" class="allproj">ROBERT Instagram</a>
+                        <a href="/smokingkills.html" id="proj10" class="allproj">Smoking Kills</a>
+                        <a href="/buzzingbalance.html" id="proj11" class="allproj">Buzzing Balance</a>
+                        <a href="/albumcover.html" id="proj12" class="allproj">Album Cover</a>
+                    </div>
+                </div>
+            </div>
+            <div id="info">
+                <p id="infotxt">This work was part of a series consisting of three triptychs advertising a film festival only showing films that were banned around the world. Each poster represents a day of the festival and shares what will happen. The terms written in red focus on the overall theme of that day.
+                    <br>
+                    <br>
+                    In order to symbolize the voices taken away by censorship, different people were cut out creating anonymity with no identity. The overlapping innaccessible type represents the stories that want to be shared yet are covered up and are unable to be heard.
+                </p>
+                </div>
+            <div id="imageplaceholder">
+            </div>
+        </div>
+    </div>
+    <div id="scroll">
+        <div id="txtplaceholder"></div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/symbtrypmock.jpg" alt="Symbolism Triptych full poster">
+        </div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/singlesymtryp.jpg" alt="Symbolism Triptych full poster">
+        </div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/symtryptich.jpg" alt="Symbolism Triptych full poster">
+        </div>
+        <div id="imagelive" class="fullimg">
+            <img src="images/reptryptichlogo.jpg" alt="Symbolism Triptych full poster">
+        </div>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('projects');
+            const dropdown = document.getElementById('projectsDropdown');
+            if (!toggleButton || !dropdown) {
+                return;
+            }
+
+            const path = window.location.pathname;
+            const onIndex = /\/(?:index\.html)?$/.test(path);
+            if (!onIndex) {
+                dropdown.classList.add('is-open');
+                dropdown.hidden = false;
+                toggleButton.setAttribute('aria-expanded', 'true');
+                toggleButton.classList.add('is-open');
+            }
+
+            toggleButton.addEventListener('click', function () {
+                const isOpen = dropdown.classList.toggle('is-open');
+                dropdown.hidden = !isOpen;
+                toggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                toggleButton.classList.toggle('is-open', isOpen);
+            });
+        });
+    </script>
+</body>
+</html>
