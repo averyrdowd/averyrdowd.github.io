@@ -135,12 +135,16 @@ a {
     font-size: 18px;
     padding: 5px 0;
     background: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
     border: none;
     display: inline-flex;
     gap: 6px;
     align-items: flex-end;
     font-family: "aileron";
     cursor: pointer;
+    color: black;
 }
 #projects:focus-visible {
     outline: 2px solid #000;
