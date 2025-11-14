@@ -68,7 +68,6 @@ p {
 #nametxt {
     font-weight: 700;
     font-size: 23.54px;
-    cursor: default;
 }
 #infotxt {
     font-size: 14px;
@@ -192,6 +191,15 @@ a {
     width: 100%;
     padding: 22.5% 40px 20px 40px;
     box-sizing: border-box;
+}
+.scrollpfp {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+.scrollpfp.is-visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 #txtplaceholder {
     grid-column: 1 / span 5;
