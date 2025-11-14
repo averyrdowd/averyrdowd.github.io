@@ -144,7 +144,9 @@ a {
     align-items: flex-end;
     font-family: "aileron";
     cursor: pointer;
-    color: black;
+    color: #000;
+    -webkit-text-fill-color: #000;
+    text-decoration: none;
 }
 #projects:focus-visible {
     outline: 2px solid #000;
@@ -436,9 +438,22 @@ button.prev, button.next {
         width: 100%;
     }
     #infotxt {
+        font-size: 12px;
         margin-bottom: 20px;
     }
     #txtplaceholder {
         display: none;
+    }
+    #email {
+        font-size: 12px;
+    }
+    #resume {
+        font-size: 12px;
+    }
+    #nametxt {
+        font-size: 20px;
+    }
+    .allproj {
+        font-size: 12px;
     }
 }
