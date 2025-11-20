@@ -13,22 +13,34 @@
 <body>
     <div id="container">
         <div id="top">
-            <a href="./" id="name">
-                <span id="nametxt">Avery R. Dowd</span>
-            </a>
-            <div id="title">
-                <p id="titletxt">Explore</p>
+            <div id="btnstg">
+                <a href="./" id="home">Home</a>
+                <!--<a href="/gallery.html" id="gallery">Gallery</a>-->
+                <div id="projectsToggle">
+                    <button id="projects" type="button" aria-expanded="false" aria-controls="projectsDropdown">
+                        Projects
+                        <img id="dropdown" src="images/dropdown.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div id="keeptogether">
+                <div id="infofloat">
+                <a href="./" id="name">
+                    <span id="nametxt">Avery R. Dowd</span>
+                </a>
+                <div id="contact">
+                    <a id="email">averyrdowd@gmail.com</a><br>
+                    <a href="images/AveryDowdResume.pdf" id="resume" download>[Resume/CV]</a>
+                </div>
+                </div>
+                <div id="title">
+                    <p id="titletxt">Explore</p>
+                </div>
             </div>
         </div>
         <div id="bottom">
             <div id="navigation">
-                <div id="contact">
-                    <a id="email">averyrdowd@gmail.com</a>
-                    <a href="" id="resume" download>[Resume/CV]</a>
-                </div>
                 <div id="navbtns">
-                    <a href="./" id="home">Home</a>
-                    <a href="/gallery.html" id="gallery">Gallery</a>
                     <div id="projectsToggle">
                         <button id="projects" type="button" aria-expanded="false" aria-controls="projectsDropdown">
                             Projects
@@ -154,27 +166,40 @@
         document.addEventListener('DOMContentLoaded', function () {
             const toggleButton = document.getElementById('projects');
             const dropdown = document.getElementById('projectsDropdown');
+            const scrollSection = document.querySelector('.scrollpfp');
+            const fullPortrait = document.getElementById('fullportrait');
+            const storageKey = 'projectsDropdownOpen';
+            let portraitShowTimer;
+
             if (!toggleButton || !dropdown) {
                 return;
             }
 
-            const storageKey = 'projectsDropdownOpen';
-
-            const applyState = (isOpen) => {
+            const applyState = (isOpen, options = {}) => {
+                const { immediate = false } = options;
+                clearTimeout(portraitShowTimer);
                 dropdown.classList.toggle('is-open', isOpen);
                 dropdown.hidden = !isOpen;
                 toggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
                 toggleButton.classList.toggle('is-open', isOpen);
+                if (scrollSection) {
+                    scrollSection.classList.toggle('is-visible', isOpen);
+                }
+                if (fullPortrait) {
+                    if (isOpen) {
+                        fullPortrait.classList.add('fullportrait-hidden');
+                    } else if (immediate) {
+                        fullPortrait.classList.remove('fullportrait-hidden');
+                    } else {
+                        portraitShowTimer = setTimeout(() => {
+                            fullPortrait.classList.remove('fullportrait-hidden');
+                        }, 70);
+                    }
+                }
             };
 
             const savedState = localStorage.getItem(storageKey);
-            if (savedState !== null) {
-                applyState(savedState === 'true');
-            } else {
-                const path = window.location.pathname;
-                const onIndex = /\/(?:index\.html)?$/.test(path);
-                applyState(!onIndex);
-            }
+            applyState(savedState === 'true', { immediate: true });
 
             toggleButton.addEventListener('click', function () {
                 const newState = !dropdown.classList.contains('is-open');

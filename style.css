@@ -13,7 +13,7 @@ body {
 }
 #container {
     width: 100%;
-    padding: 15% 40px 0 40px;
+    padding: 100px 40px 0 40px;
     position: fixed;
     display: grid;
 }
@@ -33,12 +33,23 @@ body {
     height: 129.25px;
     margin-bottom: 4px;
 }
+#keeptogether {
+    grid-column: 3 / span 3;
+    display: flex;
+    flex-direction: column;
+}
+#infofloat {
+    padding-bottom: 150px;
+}
+#btnstg {
+    grid-column: 1 / span 2;
+}
 #homeimg {
     grid-column: span 2;
     align-self: end;
 }
-#title {
-    grid-column: span 3;
+#top #title {
+    margin-top: auto;
     margin-bottom: 5px;
 }
 #bottom {
@@ -99,7 +110,7 @@ a {
     cursor: pointer;
 }
 #navbtns {
-    padding-top: 20px;
+    /*padding-top: 20px;*/
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -154,7 +165,7 @@ a {
 }
 #projectsDropdown {
     display: none;
-    margin-top: 5px;
+    /*margin-top: 5px;*/
 }
 #projectsDropdown.is-open {
     display: block;
@@ -167,6 +178,9 @@ a {
     opacity: 0.5;
     transition: opacity 0.2s ease, font-weight 0.2s ease;
 }
+#proj1 {
+    margin-top: 0;
+}
 .allproj:hover {
     opacity: 1;
     font-weight: 700;
@@ -177,6 +191,18 @@ a {
 #portrait {
     width: 100px;
     height: 129.25px;
+}
+#fullportrait {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    right: 30px;
+    margin-top: -10px;
+    transition: opacity 0.08s ease-out;
+}
+#fullportrait.fullportrait-hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 #dropdown {
     width: 14px;
@@ -195,7 +221,7 @@ a {
     column-gap: 20px;
     row-gap: 8px;
     width: 100%;
-    padding: 22.5% 40px 20px 40px;
+    padding: 20px 40px 20px 40px;
     box-sizing: border-box;
 }
 .scrollpfp {
