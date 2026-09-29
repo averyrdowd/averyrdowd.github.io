@@ -900,6 +900,9 @@ body.archive-page #desctext .desctext {
 .archive-mobile-controls {
     display: none;
 }
+.archive-mobile-note {
+    display: none;
+}
 .archive-row {
     display: flex;
     align-items: flex-start;
@@ -1889,6 +1892,10 @@ body.archive-page #desctext .desctext {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 8pt;
         line-height: 1.2;
+    }
+
+    .archive-mobile-note {
+        display: inline;
     }
 
     .archive-mobile-controls button {
