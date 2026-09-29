@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		html, body {width: 100%; height: 100%; margin: 0; padding: 0;}
+		div {padding: 0px; position: relative;}
+		#container {width: 100%; height: 100%; background-color: #005191; position: absolute;}
+		.screen {background-color: white; box-shadow: 0 0 10px white; overflow: hidden; width: 80%; height: 80%; margin: 0 10%; top: 10%; background-color: #005191; position: absolute;}
+        
+        .items {width: 30px; position: absolute; right: 40px; top: 120px; height: auto;}
+        .item {width: 30px; height: 30px; margin: 0 0 10px 0; background-color: rgba(0,51,160,0.5); border: 4px solid #0033a0; border-radius: 12px; position: relative;}
+		
+        /*Intro Text*/
+        #starttext {margin: 5%;}
+        .bigtext {position: relative; margin: 10px 10%; font-size: 64px; font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"; color: white; text-align: center; font-weight: bold;}
+        .smalltext {color: white; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; padding: 0 0 0 15px; font-size: 36px; text-align: center; margin: 70px 0 5px 0; font-weight: bold;}
+        .instructions {color: white; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; padding: 0 0 0 15px; font-size: 18px; text-align: center;}
+        #winner {margin: 50px 0 0 0;}
+        
+        
+		/*Text Dialogue*/
+		.textbox {width: 350px; height: 50px; right: 30px; top: 30px; position: absolute; background-color: rgba(0,51,160,0.5); border: 4px solid #0033a0; border-radius: 12px;}
+		.dialogue {color: white; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; padding: 0 0 0 15px; size: 12px;}
+		
+		/*Scenes*/
+		#sc1 {background-image: url("images/scenestart.jpg"); background-size: cover;}
+		#sc2 {background-image: url("images/scene1.jpg"); background-size: cover;}
+		#sc3 {background-image: url("images/scene2.jpg"); background-size: cover;}
+		#sc4 {background-image: url("images/scene4.jpg"); background-size: cover;}
+		#sc5 {background-image: url("images/scene5.jpg"); background-size: cover;}
+		#sc6 {background-image: url("images/scene6.jpg"); background-size: cover;}
+		#sc7 {background-image: url("images/scene7.jpg"); background-size: cover;}
+        #sc8 {background-image: url("images/scene8.jpg"); background-size: cover;}
+        #sc9 {background-image: url("images/scenestart.jpg"); background-size: cover;}
+		
+		/*Buttons*/
+		a {width: 100px; height: 100px; display: inline-block; overflow: hidden; z-index: 2;}
+		#sc2-r, #sc3-r, #sc4-r, #sc5-r, #sc6-r {right: 30px; bottom: 30px; position: absolute;}
+		#sc3-l, #sc4-l, #sc5-l, #sc6-l, #sc7-l {left: 30px; bottom: 30px; position: absolute;}
+		#sc6-u {bottom: -100000px; position: absolute; left: 45%; opacity: 0;}
+		#sc8-d {bottom: 30px; position: absolute; left: 45%;}
+		a img {height: 100%; object-fit: contain; display: block;}
+		#sc1-play {width: 30%; height: 150px; bottom: 50px; left: 38%; position: absolute;}
+        #sc2-f {opacity: 0; left: -1000000px; bottom: 30px; position: absolute;}
+        #sc9-play {width: 40%; height: 150px; bottom: 50px; left: 35%; position: absolute;}
+
+		
+		/*Interactive Objects*/
+		#wetflr {background-image: url("images/movingwetfloorsign.png"); background-size: 81%; height: 175px; width: 200px; top: 400px; left: 350px; position: absolute; z-index: 2;}
+		#taxi {width: 500px; height: 250px; background-image: url("images/taxi.png"); background-size: contain; bottom: 0px; left: 60px; position: absolute;}
+		#chf {background-image: url("images/10chf.png"); background-size: 100%; height: 50px; width: 50px; top: 480px; left: -100000px; position: absolute; opacity: 0; z-index: 3;}
+		#suitcase {background-image: url("images/suitcase.png"); background-size: 110%; height: 200px; width: 180px; top: 375px; left: 700px; position: absolute; z-index: 2;}
+		#hat {background-image: url("images/hat.png"); background-size: 100%; height: 70px; width: 70px; top: 470px; left: 755px; position: absolute; opacity: 0;}
+		#man1 {background-image: url("images/man1.png"); height: 450px; width: 225px; background-size: 100%; left: 260px; top: 205px; position: absolute;}
+		#man2 {background-image: url("images/man2.png"); height: 450px; width: 225px; background-size: 100%; left: 775px; top: 250px; position: absolute;}
+		#hand {background-image: url("images/hand.png"); height: 225px; width: 225px; background-size: 90%; left: -100000px; top: 395px; position: absolute; opacity: 0;}
+		#shoe {background-image: url("images/shoe.png"); background-size: 100%; height: 100px; width: 100px; top: 450px; left: 825px; z-index: 2;}
+		#woman1 {background-image: url("images/woman1.png"); height: 450px; width: 225px; background-size: 100%; left: 400px; top: 250px; position: absolute;}
+		#hand2 {background-image: url("images/hand2.png"); height: 225px; width: 225px; background-size: 90%; left: -100000px; top: 365px; position: absolute; opacity: 0;}
+		#woman2 {background-image: url("images/woman2.png"); height: 550px; width: 325px; background-size: 100%; left: 420px; top: 200px; position: absolute;}
+        #kid1 {background-image: url("images/kid1.png"); height: 450px; width: 225px; background-size: 100%; left: 760px; top: 205px; position: absolute;}
+        #keychain {background-image: url("images/keychain.png"); height: 225px; width: 225px; background-size: 90%; left: -100000px; top: 405px; position: absolute; opacity: 0;}
+        #ticket {background-image: url("images/ticket.png"); height: 225px; width: 225px; background-size: 100%; left: -10000px; top: 300px; opacity: 0;}
+		
+		/* Animation Effects */
+		
+		@keyframes fade{
+			from{opacity: 30%; filter: drop-shadow(0 0 0 #fff);}
+			to{opacity: 1; filter: drop-shadow(0 0 10px #fff);}
+		}
+	
+		#sc1-play{animation: fade 1s linear alternate 0s infinite;}
+        #sc9-play{animation: fade 1s linear alternate 0s infinite;}
+
+	</style>
+	
+	<meta charset="UTF-8">
+	
+	<title>Lesson02-01</title>
+</head>
+
+<body>
+	<div id="container">
+		<div class="screen" id="sc1">
+            <div id="starttext">
+			    <p class="bigtext">YOUR UBER CANCELLED</p>
+                <p class="bigtext">AT NEWARK AIRPORT.</p>
+                <p class="smalltext">TRY TO ESCAPE!</p>
+                <p class="instructions">Interact with the scene and people to figure out a way to get home!</p>
+            </div>
+			<a id="sc1-play" class="btn"><img src="images/playbtn.png"></a>
+            <div id="music">
+            <audio class="song"><source src="audio/bgmusic.mp3"></audio></div>
+		</div>
+		<div class="screen" id="sc2">
+			<div class="textbox"><p class="dialogue">I'll give you a ride for a keychain.</p></div>
+			<div id="taxi"></div>
+			<div id="shoe"></div>
+			<a id="sc2-r" class="btn"><img src="images/arrowR.png"></a>
+            <a id="sc2-f" class="btn"><img src="images/arrowL.png"></a>
+		</div>
+		<div class="screen" id="sc3">
+			<div class="textbox"><p class="dialogue">...</p></div>
+			<div id="wetflr"></div>
+			<div id="chf"></div>
+			<a id="sc3-l" class="btn"><img src="images/arrowL.png"></a>
+			<a id="sc3-r" class="btn"><img src="images/arrowR.png"></a>
+		</div>
+		<div class="screen" id="sc4">
+			<div class="textbox"><p class="dialogue">Help! I can't find my shoe.</p></div>
+			<div id="woman1"></div>
+			<div id="hand2"></div>
+			<a id="sc4-l" class="btn"><img src="images/arrowL.png"></a>
+			<a id="sc4-r" class="btn"><img src="images/arrowR.png"></a>
+		</div>
+		<div class="screen" id="sc5">
+			<div class="textbox"><p class="dialogue">...</p></div>
+			<div id="suitcase"></div>
+			<div id="hat"></div>
+			<div id="man1"></div>
+            <div id="ticket"></div>
+			<a id="sc5-l" class="btn"><img src="images/arrowL.png"></a>
+			<a id="sc5-r" class="btn"><img src="images/arrowR.png"></a>
+		</div>
+		<div class="screen" id="sc6">
+			<div class="textbox"><p class="dialogue">You need a ticket to enter.</p></div>
+			<div id="woman2"></div>
+			<a id="sc6-l" class="btn"><img src="images/arrowL.png"></a>
+			<a id="sc6-u" class="btn"><img src="images/arrowU.png"></a>
+			<a id="sc6-r" class="btn"><img src="images/arrowR.png"></a>
+		</div>
+		<div class="screen" id="sc7">
+            <div class="textbox"><p class="dialogue">...</p></div>
+			<div id="man2"></div>
+			<div id="hand"></div>
+			<a id="sc7-l" class="btn"><img src="images/arrowL.png"></a>
+		</div>
+		<div class="screen" id="sc8">			
+			<div class="textbox"><p class="dialogue">I can't find my hat.</p></div>
+            <div id="kid1"></div>
+            <div id="keychain"></div>
+			<a id="sc8-d" class="btn"><img src="images/arrowD.png"></a>
+		</div>
+        <div class="screen" id="sc9">
+                <p id="winner" class="bigtext">YOU WIN!</p>
+                <p id="timer" class="smalltext">Your time: </p>
+                <a id="sc9-play" class="btn"><img src="images/playagain.png"></a>
+        </div>
+	</div>
+	<script>
+		const screen = document.getElementsByClassName('screen')
+		const btn = document.getElementsByClassName('btn')
+		const taxi = document.getElementById('taxi')
+		const wetFlr = document.getElementById('wetflr')
+		const dialogue = document.getElementsByClassName('dialogue')
+		const chf = document.getElementById('chf')
+		const hat = document.getElementById('hat')
+		const manOne = document.getElementById('man1')
+		const manTwo = document.getElementById('man2')
+		const hand = document.getElementById('hand')
+		const handTwo = document.getElementById('hand2')
+		const shoe = document.getElementById('shoe')
+		const womanOne = document.getElementById('woman1')
+		const womanTwo = document.getElementById('woman2')
+		const upBtn = document.getElementById('sc6-u')
+        const kid = document.getElementById('kid1')
+        const keychain = document.getElementById('keychain')
+        const ticket = document.getElementById('ticket')
+        const timer = document.getElementById('timer')
+        const song = document.getElementsByClassName('song')
+		
+		var xPosWetFlr = 20
+		var xPosSuitcase = 50
+		var chfPoints = 1
+		var hatPoints = 1
+		var usdPoints = 1
+		var shoePoints = 1
+		var ticketPoints = 1
+		var keychainPoints = 1
+        var timerVal = 0
+        var timerInt = 0
+		
+		/*Wet Floor*/
+		function moveWetFlr(){wetFlr.style.left = xPosWetFlr + "%"}
+		wetFlr.onmouseup = function(){moveWetFlr()
+									  showCHF()}
+		
+		function showCHF(){
+            if (chfPoints == 1) {chf.style.opacity = "100%"
+						  chf.style.left = 392 + "px"}}
+		
+		/*Suitcase*/
+		function moveSuitcase(){suitcase.style.left = xPosSuitcase +"%"}
+		suitcase.onmouseup = function(){moveSuitcase()
+										showHat()}
+		
+		function showHat(){hat.style.opacity = "100%"}
+		
+		/*Taxi*/
+		function taxiText(){
+			if(keychainPoints == 2){dialogue[0].innerHTML = "Thanks for the keychain, hop in!"
+                                   btn[2].style.opacity = 100 + "%"
+                                   btn[2].style.left = 30 + "px"}
+			else if(keychainPoints < 2){dialogue[0].innerHTML = "If you give me a keychain, I'll give you a ride."}
+		}
+		taxi.onmouseup = function(){taxiText()}
+        
+        /*Kid1*/
+        function kidText(){
+            if(hatPoints == 2){dialogue[6].innerHTML = "My hat, thanks! Here's a keychain!"
+                              hatPoints+=2
+                              keychain.style.opacity = 100 + "%"
+                              keychain.style.left = 800 + "px"}
+            else if(hatPoints == 1){dialogue[6].innerHTML = "I can't find my hat!"}
+            else if(hatPoints == 0){dialogue[6].innerHTML = "Thanks for your help!"}
+        }
+        kid.onmouseup = function(){kidText()}
+        
+        /*Keychain*/
+        function collectKeychain(){keychainPoints+=1
+                                    keychain.style.opacity = 0 + "%"
+                                   keychain.style.left = "-" + 10000000 + "px"}
+        keychain.onmouseup = function(){collectKeychain()}
+		
+		/*Man1*/
+		function manText(){
+			if(usdPoints == 3){dialogue[3].innerHTML = "Here is your ticket. Have a nice flight!"
+							  usdPoints-=3
+                              ticket.style.opacity = 100 + "%"
+                              ticket.style.left = 230 + "px"
+							  }
+            else if(usdPoints == 2){dialogue[3].innerHTML = "The cheapest ticket is $15."}
+			else if(usdPoints == 1){dialogue[3].innerHTML = "The cheapest ticket is $15."}
+            else if(usdPoints == 0){dialogue[3].innerHTML = "Have a nice flight!"}
+		}
+		manOne.onmouseup = function(){manText()}
+		
+		
+		/*Man2*/
+		function man2Text(){			
+			if(chfPoints == 2){dialogue[5].innerHTML = "Here is 10USD. Come again soon!"
+							   hand.style.opacity = 100 + "%"
+							  hand.style.left = 790 + "px"
+							  usdPoints+=1}
+			else if(chfPoints == 1){dialogue[5].innerHTML = "10CHF to 10USD exchange rate."}
+		}
+			manTwo.onmouseup = function(){man2Text()}
+			
+		/*Woman1*/
+		function woman1Text(){			
+			if(shoePoints == 2){dialogue[2].innerHTML = "You found it, thank you! Here is 5$."
+							   handTwo.style.opacity = 100 + "%"
+							  handTwo.style.left = 420 + "px"
+							  usdPoints+=1}
+			else if(shoePoints == 1){dialogue[2].innerHTML = "I lost my shoe!"}
+            else if(shoePoints == 0){dialogue[2].innerHTML = "Thanks for your help!"}
+		}
+			womanOne.onmouseup = function(){woman1Text()}
+			
+		/*Woman2*/
+		function woman2Text(){
+			if(ticketPoints == 2){dialogue[4].innerHTML = "Thank you, have a nice flight!"
+								 womanTwo.style.height = 450 + "px"
+								 womanTwo.style.width = 225 + "px"
+								 womanTwo.style.left = 320 + "px"
+								 upBtn.style.opacity = 100 + "%"
+								 upBtn.style.bottom = 30 + "px"
+                                 ticketPoints-=2}
+			else if(ticketPoints == 1){dialogue[4].innerHTML = "Ticketed passengers only after this point."}
+            else if(ticketPoints == 0){dialogue[4].innerHTML = "Right this way."}
+		}
+		
+		womanTwo.onmouseup = function(){woman2Text()}
+			
+		/*Hand*/
+		function subtractCHF(){ 
+			if (chfPoints > 1){chfPoints-=1
+							  hand.style.opacity = 0 + "%"
+                              hand.style.left = "-" + 10000000 + "px"}
+		}
+			hand.onmouseup = function(){subtractCHF()}
+			
+		/*Hand2*/
+		function subtractShoe(){ 
+			if (shoePoints > 1){shoePoints-=2
+							  handTwo.style.opacity = 0 + "%"
+                               handTwo.style.left = "-" + 10000000 + "px"}
+		}
+			handTwo.onmouseup = function(){subtractShoe()}
+		
+		/* CHF */
+		function chfCollect(){chfPoints+=1}
+		chf.onmouseup = function(){chfCollect()}
+		
+		/* Hat */
+		function hatCollect(){hatPoints+=1}
+		hat.onmouseup = function(){hatCollect()}
+		
+		/* Shoe */
+		function shoeCollect(){shoePoints+=1}
+		shoe.onmouseup = function(){shoeCollect()}
+        
+        /* Ticket */
+        function ticketCollect(){ticketPoints+=1
+                                ticket.style.opacity = 0
+                                ticket.style.left = "-" + 100000 + "px"}
+        ticket.onmouseup = function(){ticketCollect()}
+		
+		/*Screen*/
+		function goToScreen(screenSel){for(i = 0; i < screen.length; i++){screen[i].style.display = "none"}screen[screenSel].style.display = "block"}
+		
+	goToScreen(0)
+		
+	btn[0].onmouseup = function(){goToScreen(1)
+								 defaultText1()
+                                 startTimer()
+                                loadSong()}
+	
+	btn[1].onmouseup = function(){goToScreen(2)
+								 defaultText2()}
+    btn[2].onmouseup = function(){goToScreen(8)
+                                 stopTimer()}
+	
+	btn[3].onmouseup = function(){goToScreen(1)
+								 defaultText1()}
+	btn[4].onmouseup = function(){goToScreen(3)
+								 defaultText3()}
+	
+	btn[5].onmouseup = function(){goToScreen(2)
+								 defaultText2()}
+	btn[6].onmouseup = function(){goToScreen(4)
+								 defaultText4()}
+	
+	btn[7].onmouseup = function(){goToScreen(3)
+								 defaultText3()}
+	btn[8].onmouseup = function(){goToScreen(5)
+								 defaultText5()}
+	
+	btn[9].onmouseup = function(){goToScreen(4)
+								 defaultText4()}
+	btn[10].onmouseup = function(){goToScreen(7)
+								 defaultText7()}
+	btn[11].onmouseup = function(){goToScreen(6)
+								  defaultText6()}
+	
+	btn[12].onmouseup = function(){goToScreen(5)
+								  defaultText5()}
+	
+	btn[13].onmouseup = function(){goToScreen(5)
+								  defaultText5()}
+	
+    btn[14].onmouseup = function(){goToScreen(0)
+                                  restartGame()
+                                  restartTimer()}
+
+	
+	/*Dialogue*/
+	function textTwo(){dialogue[1].innerHTML = "You found 10CHF."
+					  chf.style.opacity = 0
+					  chf.style.left = "-" + 10000 + "px"}
+	
+	chf.onclick = function(){textTwo()}
+	
+	function textFour(){dialogue[3].innerHTML = "You found a hat."
+					   hat.style.opacity = 0
+					   hat.style.left = "-" + 10000 + "px"}
+		
+	hat.onclick = function(){textFour()}
+	
+	function textOne(){dialogue[0].innerHTML = "You found a shoe."
+					  shoe.style.opacity = 0
+					  shoe.style.left = "-" + 10000 + "px"}
+	shoe.onclick = function(){textOne()}
+					 
+	
+	function defaultText1(){dialogue[0].innerHTML = "..."}
+	function defaultText2(){dialogue[1].innerHTML = "..."}
+	function defaultText3(){dialogue[2].innerHTML = "..."}
+	function defaultText4(){dialogue[3].innerHTML = "..."}
+	function defaultText5(){dialogue[4].innerHTML = "..."}
+	function defaultText6(){dialogue[5].innerHTML = "..."}
+	function defaultText7(){dialogue[6].innerHTML = "..."}
+        
+    /* Timer */
+    function runTimer(){
+	   timerVal++
+        timer.innerHTML = "Your time: " + timerVal + " seconds";
+    }
+
+    function startTimer(){
+	   timerInt = setInterval(runTimer, 1000)
+    }
+
+    function restartTimer(){
+	   timerVal = 0
+	   clearInterval(timerInt)}
+	
+    function stopTimer(){
+	   timerVal = 0
+	   clearInterval(timerInt)
+    }
+
+/*restart game*/
+
+function restartGame(){xPosSuitcase = 50
+		chfPoints = 1
+		hatPoints = 1
+		usdPoints = 1
+		shoePoints = 1
+		ticketPoints = 1
+		keychainPoints = 1
+        shoe.style.opacity = 1
+        shoe.style.left = 825 + "px"
+        hat.style.opacity = 1
+        hat.style.left = 755 + "px"
+        chf.style.opacity = 1
+        wetFlr.style.left = 350 + "px"
+        suitcase.style.left = 700 + "px"
+        btn[2].style.opacity = 0
+        btn[2].style.left = "-" + 100000 + "px"
+        womanTwo.style.height = 550 + "px"
+        womanTwo.style.width = 325 + "px"
+        womanTwo.style.left = 420 + "px"
+        upBtn.style.opacity = 0
+        upBtn.style.bottom = "-" + 1000000 + "px"
+}
+        
+    function loadSong (){
+        song[0].play()
+    }
+	        
+	</script>
+</body>
+</html>

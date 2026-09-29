@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Design Capabilities of AI | Avery R. Dowd</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+<script src="script.js" defer></script>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+</head>
+
+<body class="ai-project-page">
+
+<div id="container">
+    <div id="menu">
+        <div id="logo">
+            <a><img src="images/signature_v4.jpg" alt="Avery R. Dowd"></a>
+        </div>
+        <div id="menuoptions">
+            <div id="home">
+                <a class="menubtns" href="index.html">HOME</a>
+            </div>
+            <div id="work">
+                <a class="menubtns" href="work.html">WORK</a>
+            </div>
+            <div id="archive">
+                <a class="menubtns" href="archive.html">ARCHIVE</a>
+            </div>
+        </div>
+        <div id="resume">
+            <a class="menubtns resumelink">RESUME/CV</a>
+        </div>
+    </div>
+    <div id="content">
+        <div id="left" class="project-layout">
+            <div id="pagetitle">
+                <a id="projnumb">[02]</a>
+                <div id="projtitleandtype">
+                    <a id="projtitle">A Study on the Graphic Design Capabilities of AI</a>
+                    <a id="projtype">SENIOR THESIS</a>
+                </div>
+            </div>
+            <div id="description">
+                <div id="descheader">
+                    <a class="descheader">DESCRIPTION</a>
+                </div>
+                <div id="desctext">
+                    <a class="desctext">Can generative systems replicate historically embedded authorship? What gets lost? What changes? What survives? This book investigates the capabilities of Artificial Intelligence through three case studies: SBB, NASA, and MUJI. The historical context of each brand is explained and analyzed, forming a design brief. AI is prompted with the same scenario and its output is compared with the real human design.<br><br>Two books side-by-side, one constructed and one generated. Choose your own navigation, whether that be together or one at a time, comparing the capabilities of Artificial Intelligence to a human designer. As you read, form your conclusion on the success of AI’s design. Where is the future of graphic design heading as we introduce these revolutionary tools?</a>
+                </div>
+            </div>
+            <div id="projectnavbtns">
+                <a class="projectnavbtn projectnavbtn-back" href="silenced-cinema.html" data-project="Silenced Cinema" aria-label="Previous project: Silenced Cinema">&lt; BACK</a>
+                <a class="projectnavbtn projectnavbtn-next" href="robert-restaurant.html" data-project="ROBERT Restaurant" aria-label="Next project: ROBERT Restaurant">NEXT &gt;</a>
+            </div>
+        </div>
+        <div id="right">
+            <div id="projectpageimages">
+                <div class="video-player">
+                    <video src="images/thesisvideo.mp4" poster="images/thesisvideothumbnail.png" controls playsinline></video>
+                    <div class="video-controls" hidden>
+                        <button type="button" class="video-play" aria-label="Play" title="Play"><i data-lucide="play"></i></button>
+                        <input class="video-seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Video position">
+                        <button type="button" class="video-mute" aria-label="Mute" title="Mute"><i data-lucide="volume-2"></i></button>
+                        <input class="video-volume" type="range" min="0" max="1" value="1" step="0.01" aria-label="Volume">
+                        <button type="button" class="video-fullscreen" aria-label="Enter fullscreen" title="Enter fullscreen"><i data-lucide="maximize"></i></button>
+                    </div>
+                </div>
+                <div class="dual-thesis-slideshow">
+                    <section class="thesis-slideshow" data-prefix="images/humanthesis/humanthesis" data-count="23" data-label="Human thesis">
+                        <div class="thesis-slide-frame">
+                            <img src="images/humanthesis/humanthesis1.jpg" alt="Human thesis page 1">
+                        </div>
+                        <div class="thesis-slide-controls">
+                            <button type="button" class="thesis-slide-prev" aria-label="Previous human thesis image" title="Previous image"><i data-lucide="chevron-left"></i></button>
+                            <div class="thesis-slideshow-header">
+                                <span>HUMAN</span>
+                                <span class="thesis-slide-count" aria-live="polite">01 / 23</span>
+                            </div>
+                            <button type="button" class="thesis-slide-next" aria-label="Next human thesis image" title="Next image"><i data-lucide="chevron-right"></i></button>
+                        </div>
+                    </section>
+
+                    <section class="thesis-slideshow" data-prefix="images/computerthesis/computerthesis" data-count="23" data-label="Computer thesis">
+                        <div class="thesis-slide-frame">
+                            <img src="images/computerthesis/computerthesis1.jpg" alt="Computer thesis page 1">
+                        </div>
+                        <div class="thesis-slide-controls">
+                            <button type="button" class="thesis-slide-prev" aria-label="Previous computer thesis image" title="Previous image"><i data-lucide="chevron-left"></i></button>
+                            <div class="thesis-slideshow-header">
+                                <span>COMPUTER</span>
+                                <span class="thesis-slide-count" aria-live="polite">01 / 23</span>
+                            </div>
+                            <button type="button" class="thesis-slide-next" aria-label="Next computer thesis image" title="Next image"><i data-lucide="chevron-right"></i></button>
+                        </div>
+                    </section>
+
+                    <button type="button" class="thesis-slide-both" title="Advance both slideshows">
+                        <span>BOTH</span><i data-lucide="chevrons-right"></i>
+                    </button>
+                </div>
+                <div class="thesis-display-grid">
+                    <img class="thesis-on-display" src="images/thesisondisplay.jpg" alt="Thesis project on display">
+                    <div class="thesis-book-stack">
+                        <img class="thesis-book-primary" src="images/thesisbook.jpg" alt="Thesis book detail">
+                        <img class="thesis-book-secondary" src="images/thesisbook2.jpg" alt="Thesis book detail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

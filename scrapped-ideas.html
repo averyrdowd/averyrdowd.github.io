@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avery R. Dowd</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+<script src="script.js" defer></script>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+</head>
+
+<body>
+
+<div id="container">
+    <div id="menu">
+        <div id="logo">
+            <a><img src="images/signature_v4.jpg" alt="Avery R. Dowd"></a>
+        </div>
+        <div id="menuoptions">
+            <div id="home">
+                <a class="menubtns" href="index.html">HOME</a>
+            </div>
+            <div id="work">
+                <a class="menubtns" href="work.html">WORK</a>
+            </div>
+            <div id="archive">
+                <a class="menubtns" href="archive.html">ARCHIVE</a>
+            </div>
+        </div>
+        <div id="resume">
+            <a class="menubtns resumelink">RESUME/CV</a>
+        </div>
+    </div>
+    <div id="content">
+        <div id="left" class="project-layout">
+            <div id="pagetitle">
+                <a id="projnumb">[05]</a>
+                <div id="projtitleandtype">
+                    <a id="projtitle">Scrapped Ideas</a>
+                    <a id="projtype">SOCIAL MEDIA</a>
+                </div>
+            </div>
+            <div id="description">
+                <div id="descheader">
+                    <a class="descheader">DESCRIPTION</a>
+                </div>
+                <div id="desctext">
+                    <a class="desctext">As part of the Adobe Creative Apprenticeship Program, I worked with Adobe to create a social media short sharing how I use Firefly Boards in my design process.<br><br>The final design took form as an advertisement for an exhibition sharing sketches and concepts from famous artists and designers that didn't make it to the final stage. By understanding the thought process behind the greats, viewers can gain a better understanding of process, experimentation, and trial and error. In turn, the project shows how Firefly Boards can be used to organize ideas and streamline the creative process.</a>
+                </div>
+            </div>
+            <div id="projectnavbtns">
+                <a class="projectnavbtn projectnavbtn-back" href="language-and-perception.html" data-project="Language and Perception" aria-label="Previous project: Language and Perception">&lt; BACK</a>
+                <a class="projectnavbtn projectnavbtn-next" href="public-seating.html" data-project="Public Seating" aria-label="Next project: Public Seating">NEXT &gt;</a>
+            </div>
+        </div>
+        <div id="right">
+            <div id="projectpageimages">
+                <div class="scrapped-media">
+                    <img src="images/scrappedideasposter.jpg" alt="Scrapped Ideas poster">
+                    <div class="video-player">
+                        <video src="images/scrappedideasmock.mp4" controls playsinline></video>
+                        <div class="video-controls" hidden>
+                            <button type="button" class="video-play" aria-label="Play" title="Play"><i data-lucide="play"></i></button>
+                            <input class="video-seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Video position">
+                            <button type="button" class="video-mute" aria-label="Mute" title="Mute"><i data-lucide="volume-2"></i></button>
+                            <input class="video-volume" type="range" min="0" max="1" value="1" step="0.01" aria-label="Volume">
+                            <button type="button" class="video-fullscreen" aria-label="Enter fullscreen" title="Enter fullscreen"><i data-lucide="maximize"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

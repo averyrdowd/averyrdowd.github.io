@@ -6,205 +6,113 @@
 <title>Avery R. Dowd</title>
 
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 </head>
 
-<body>
-    <div id="container">
-        <div id="top">
-            <div id="btnstg">
-                <a href="./" id="home">Home</a>
-                <!--<a href="/gallery.html" id="gallery">Gallery</a>-->
-                <div id="projectsToggle">
-                    <button id="projects" type="button" aria-expanded="false" aria-controls="projectsDropdown">
-                        Projects
-                        <img id="dropdown" src="images/dropdown.svg" alt="">
-                    </button>
-                </div>
+<body class="about-page">
+
+<div id="container">
+    <div id="menu">
+        <div id="logo">
+            <a><img src="images/signature_v4.jpg" alt="Avery R. Dowd"></a>
+        </div>
+        <div id="menuoptions">
+            <div id="home">
+                <a class="menubtns" href="index.html">HOME</a>
             </div>
-            <div id="keeptogether">
-                <div id="infofloat">
-                <a href="./" id="name">
-                    <span id="nametxt">Avery R. Dowd</span>
-                </a>
-                <div id="contact">
-                    <a id="email">averyrdowd@gmail.com</a><br>
-                    <a href="images/AveryDowdResume.pdf" id="resume" download>[Resume/CV]</a>
-                </div>
-                </div>
-                <div id="title">
-                    <p id="titletxt">Graphic Designer</p>
-                </div>
+            <div id="work">
+                <a class="menubtns" href="work.html">WORK</a>
+            </div>
+            <div id="archive">
+                <a class="menubtns" href="archive.html">ARCHIVE</a>
             </div>
         </div>
-        <div id="bottom">
-            <div id="navigation">
-                
-                <div id="navbtns">
-                    
-                    <div id="projectsDropdown" class="projects-dropdown" hidden>
-                        <a href="/repetitiontriptych.html" id="proj1" class="allproj">Repetition Triptych</a>
-                        <a href="/symbolismtriptych.html" id="proj2" class="allproj">Symbolism Triptych</a>
-                        <a href="/typographytriptych.html" id="proj3" class="allproj">Typography Triptych</a>
-                        <a href="/silencedcinema.html" id="proj4" class="allproj">Silenced Cinema Ad</a>
-                        <a href="/languageandperception.html" id="proj5" class="allproj">Language and Perception</a>
-                        <a href="/nybgthroughpoetry.html" id="proj6" class="allproj">NYBG Through Poetry</a>
-                        <a href="/insidethenypl.html" id="proj7" class="allproj">Inside the NYPL</a>
-                        <a href="/robertmenus.html" id="proj8" class="allproj">ROBERT Menus</a>
-                        <a href="/robertinstagram.html" id="proj9" class="allproj">ROBERT Instagram</a>
-                        <a href="/smokingkills.html" id="proj10" class="allproj">Smoking Kills</a>
-                        <a href="/buzzingbalance.html" id="proj11" class="allproj">Buzzing Balance</a>
-                        <a href="/albumcover.html" id="proj12" class="allproj">Album Cover</a>
+        <div id="resume">
+            <a class="menubtns resumelink" href="images/ADowd_Resume.pdf" download>RESUME/CV</a>
+        </div>
+    </div>
+    <div id="content">
+        <div id="left">
+            <div id="pagetitle">
+                <a id="projnumb"></a>
+                <div id="projtitleandtype">
+                    <a id="projtitle">Avery R. Dowd</a>
+                    <a id="projtype">VISUAL DESIGNER</a>
+                </div>
+            </div>
+            <div id="aboutme">
+                <a class="desctext">Based in New York City, I recently graduated from FIT with a BFA in Graphic Design.<br><br>I&rsquo;m interested in branding, typography, editorial design, and the spaces where print and digital design meet. My experience in hospitality and cultural institutions has shaped the way I think about design as part of a larger experience, from the menu someone holds to the identity surrounding a museum.<br><br>With a background in French and the History of Art, I&rsquo;m especially interested in the cultural and historical context behind visual communication.<br><br>Outside of design, I spend a lot of time traveling, taking photographs, listening to music, and reading.</a>
+                <div id="credentials">
+                    <a id="credtitlebold">BACKGROUND</a>
+                    <div class="credentialsdata">
+                        <a id="descheader" class="education credentialstitle">EDUCATION</a>
+                        <div class="credanddate">
+                            <a class="credtitle">Fashion Institute of Technology</a>
+                            <a class="projbtncategory2">2024-2026</a>
+                        </div>
+                        <a class="desctext2">Graphic Design BFA | Minors in French and History of Art<br>Magna Cum Laude, 3.81 GPA, Dean&rsquo;s List</a>
+                        <div class="credanddate">
+                            <a class="credtitle">Fashion Institute of Technology</a>
+                            <a class="projbtncategory2">2022-2024</a>
+                        </div>
+                        <a class="desctext2">Communication Design AAS<br>Phi Theta Kappa Honor Society, Magna Cum Laude, 3.76 GPA, Dean’s List</a>
+                    </div>
+                    <div class="credentialsdata">
+                        <a id="descheader" class="experience credentialstitle">EXPERIENCE</a>
+                        <div class="credanddate">
+                            <a class="credtitle">ROBERT Restaurant</a>
+                            <a class="projbtncategory2">JAN 2023&#8212;PRESENT</a>
+                        </div>
+                        <a class="desctext2">Printed + Digital Media Coordinator<br>Assistant Manager</a>
+                        <div class="credanddate">
+                            <a class="credtitle">Museum of Arts and Design</a>
+                            <a class="projbtncategory2">JAN 2026&#8212;MAY 2026</a>
+                        </div>
+                        <a class="desctext2">Graphic Design Intern</a>
+                    </div>
+                    <div class="credentialsdata">
+                        <a id="descheader" class="clients credentialstitle">CLIENTS</a>
+                        <div class="credanddate">
+                            <a class="credtitle">Bryant Park Grill</a>
+                            <a class="projbtncategory2">MENU DESIGN</a>
+                        </div>
+                        <div class="credanddate">
+                            <a class="credtitle">Adobe</a>
+                            <a class="projbtncategory2">SOCIAL MEDIA COLLABORATION</a>
+                        </div>
+                    </div>
+                    <div class="credentialsdata">
+                        <a id="descheader" class="accolades credentialstitle">ACCOLADES</a>
+                        <div class="credanddate">
+                            <a class="credtitle">Graduating Student Exhibition</a>
+                            <a class="projbtncategory2">2026</a>
+                        </div>
+                        <a class="desctext2">Pomerantz Art & Design Center</a>
+                        <div class="credanddate">
+                            <a class="credtitle">Tryptich Show</a>
+                            <a class="projbtncategory2">2024</a>
+                        </div>
+                        <a class="desctext2">John E. Reeves Great Hall</a>
+                        <div class="credanddate">
+                            <a class="credtitle">Co-Founder of the Graphic Design Club</a>
+                            <a class="projbtncategory2">2026</a>
+                        </div>
+                        <a class="desctext2">Fashion Institute of Technology</a>
                     </div>
                 </div>
+                <div class="about-contact">LET ME KNOW WHAT YOU THINK: <a class="previewtitle-email" href="mailto:averyrdowd@gmail.com">AVERYRDOWD@GMAIL.COM</a></div>
             </div>
-            <div id="info">
-                <p id="infotxt">Graphic designer based in New York City. Currently persuing a Bachelor’s Degree in Graphic Design at the Fashion Institute of Technology. Alongside design, she is persuing minors in the History of Art and French. She completed an Associate’s Degree in Communication Design in the Spring of 2024. 
-                    <br>
-                    <br>
-                    Interests include branding, typography, and editorial design with professional experience in hospitality design work such as designing menus, signage, and social media content for ROBERT Restaurant in Manhattan.  Eager to contribute fresh ideas and create impactful work across both digital and print media.
-                    <br>
-                    <br>
-                    When not designing, she is an avid traveler who enjoys music and reading. Her hobbies consist of collaging, photography, and LEGOs. 
-                </p>
-            </div>
-            <div id="imageplaceholder">
-                <img id="fullportrait" src="images/allportraits.jpg">
-            </div>
+        </div>
+        <div id="right">
+            <div id="previewimages" class="showing-default">
+                <img src="images/picturesofme_smaller.jpg">
         </div>
     </div>
-    <div id="scroll" class="scrollpfp">
-        <div id="txtplaceholder"></div>
-        <div class="halfimg-row">
-            <div class="halfimg" href="/repetitiontriptych.html">
-                <a class="halfimg-link" href="/repetitiontriptych.html">
-                    <img href="/repetitiontriptych.html" src="images/reptryptich.jpg" alt="Typography Triptych full poster">
-                    <span id="proj1" class="allproj gallery">Repetition Triptych</span>
-                </a>
-            </div>
-            <div class="halfimg" href="/silencedcinema.html">
-                <a class="halfimg-link" href="/silencedcinema.html">
-                    <img href="/silencedcinema.html" src="images/SilencedCinemaCompressed.gif" alt="Typography Triptych full poster">
-                    <span id="proj1" class="allproj gallery">Silenced Cinema</span>
-                </a>
-            </div>
-        </div>
-        <div class="halfimg-row">
-            <div class="halfimg" href="/symbolismtriptych.html">
-                <a class="halfimg-link" href="/symbolismtriptych.html">
-                    <img href="/symbolismtriptych.html" src="images/symtryptich.jpg" alt="Typography Triptych full poster">
-                    <span id="proj1" class="allproj gallery">Symbolism Triptych</span>
-                </a>
-            </div>
-            <div class="halfimg" href="/typographytriptych.html">
-                <a class="halfimg-link" href="/typographytriptych.html">
-                    <img href="/typographytriptych.html" src="images/typetryptich.jpg" alt="Typography Triptych full poster">
-                    <span id="proj1" class="allproj gallery">Typography Triptych</span>
-                </a>
-            </div>
-        </div>
-        <div class="halfimg-row">
-            <div class="halfimg" href="/languageandperception.html">
-                <a class="halfimg-link" href="/languageandperception.html">
-                    <img href="/languageandperception.html" src="images/BrailleBook.gif" alt="Typography Triptych full poster">
-                    <span id="proj1" class="allproj gallery">Language and Perception</span>
-                </a>
-            </div>
-            <div class="halfimg" href="/nybgthroughpoetry.html">
-                <a class="halfimg-link" href="/nybgthroughpoetry.html">
-                    <img href="/nybgthroughpoetry.html" src="images/NYBGBook.jpg" alt="Typography Triptych full poster">
-                    <span id="proj1" class="allproj gallery">NYBG Through Poetry</span>
-                </a>
-            </div>
-        </div>
-        <div class="halfimg-row">
-            <div class="halfimg" href="/insidethenypl.html">
-                <a class="halfimg-link" href="/insidethenypl.html">
-                    <img href="/insidethenypl.html" src="images/NYPLBook.jpg" alt="Typography Triptych full poster">
-                    <span id="proj1" class="allproj gallery">Inside the NYPL</span>
-                </a>
-            </div>
-            <div class="halfimg" href="/smokingkills.html">
-                <a class="halfimg-link" href="/smokingkills.html">
-                    <img href="/smokingkills.html" src="images/SmokingKillsCompressed.gif" alt="Typography Triptych full poster">
-                    <span id="proj1" class="allproj gallery">Smoking Kills</span>
-                </a>
-            </div>
-        </div>
-        <div class="halfimg-row">
-            <div class="halfimg" href="/robertmenus.html">
-                <a class="halfimg-link" href="/robertmenus.html">
-                    <img href="/robertmenus.html" src="images/robertpreview.jpg" alt="Typography Triptych full poster">
-                    <span id="proj1" class="allproj gallery">ROBERT Menus</span>
-                </a>
-            </div>
-            <div class="halfimg" href="/robertinstagram.html">
-                <a class="halfimg-link" href="/robertinstagram.html">
-                    <img href="/robertinstagram.html" src="images/pannacotta.jpg" alt="Typography Triptych full poster">
-                    <span id="proj1" class="allproj gallery">ROBERT Instagram</span>
-                </a>
-            </div>
-        </div>
-        <div class="halfimg-row">
-            <div class="halfimg" href="/buzzingbalance.html">
-                <a class="halfimg-link" href="/buzzingbalance.html">
-                    <img href="/buzzingbalance.html" src="images/BuzzingBalanceVid.gif" alt="Typography Triptych full poster">
-                    <span id="proj1" class="allproj gallery">Buzzing Balance</span>
-                </a>
-            </div>
-            <div class="halfimg" href="/albumcover.html">
-                <a class="halfimg-link" href="/albumcover.html">
-                    <img href="/albumcover.html" src="images/frontalbum.jpg" alt="Typography Triptych full poster">
-                    <span id="proj1" class="allproj gallery">Album Cover</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.getElementById('projects');
-            const dropdown = document.getElementById('projectsDropdown');
-            const scrollSection = document.querySelector('.scrollpfp');
-            const fullPortrait = document.getElementById('fullportrait');
-            const storageKey = 'projectsDropdownOpen';
-            let portraitShowTimer;
-            if (!toggleButton || !dropdown) {
-                return;
-            }
+</div>
 
-            const applyState = (isOpen, options = {}) => {
-                const { immediate = false } = options;
-                clearTimeout(portraitShowTimer);
-                dropdown.classList.toggle('is-open', isOpen);
-                dropdown.hidden = !isOpen;
-                toggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-                toggleButton.classList.toggle('is-open', isOpen);
-                if (scrollSection) {
-                    scrollSection.classList.toggle('is-visible', isOpen);
-                }
-                if (fullPortrait) {
-                    if (isOpen) {
-                        fullPortrait.classList.add('fullportrait-hidden');
-                    } else if (immediate) {
-                        fullPortrait.classList.remove('fullportrait-hidden');
-                    } else {
-                        portraitShowTimer = setTimeout(() => {
-                            fullPortrait.classList.remove('fullportrait-hidden');
-                        }, 70);
-                    }
-                }
-            };
+<!--<div id="previewtitle">AVERY R. DOWD&nbsp;&nbsp;<span class="previewtitle-role">VISUAL DESIGNER</span>&emsp;&emsp;&emsp;LET ME KNOW WHAT YOU THINK: <a class="previewtitle-email" href="mailto:averyrdowd@gmail.com">AVERYRDOWD@GMAIL.COM</a></div>-->
 
-            const savedState = localStorage.getItem(storageKey);
-            applyState(savedState === 'true', { immediate: true });
-
-            toggleButton.addEventListener('click', function () {
-                const newState = !dropdown.classList.contains('is-open');
-                applyState(newState);
-                localStorage.setItem(storageKey, String(newState));
-            });
-        });
-    </script>
 </body>
 </html>

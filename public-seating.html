@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avery R. Dowd</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+<script src="script.js" defer></script>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+</head>
+
+<body>
+
+<div id="container">
+    <div id="menu">
+        <div id="logo">
+            <a><img src="images/signature_v4.jpg" alt="Avery R. Dowd"></a>
+        </div>
+        <div id="menuoptions">
+            <div id="home">
+                <a class="menubtns" href="index.html">HOME</a>
+            </div>
+            <div id="work">
+                <a class="menubtns" href="work.html">WORK</a>
+            </div>
+            <div id="archive">
+                <a class="menubtns" href="archive.html">ARCHIVE</a>
+            </div>
+        </div>
+        <div id="resume">
+            <a class="menubtns resumelink">RESUME/CV</a>
+        </div>
+    </div>
+    <div id="content">
+        <div id="left" class="project-layout">
+            <div id="pagetitle">
+                <a id="projnumb">[06]</a>
+                <div id="projtitleandtype">
+                    <a id="projtitle">Public Seating</a>
+                    <a id="projtype">DESIGN RESEARCH</a>
+                </div>
+            </div>
+            <div id="description">
+                <div id="descheader">
+                    <a class="descheader">DESCRIPTION</a>
+                </div>
+                <div id="desctext">
+                    <a class="desctext">After walking around my neighborhood, I found that there was a surprisingly low amount of public seating. Sitting on building steps or curbs was normalized rather than having comfortable spaces for people to spend time. My research took form in three parts: documentation, a website, and a proposed solution.<br><br>For the short video, I researched New York City's approach to public seating and hostile architecture. I found that the lack of comfortable public space is often intentional, with design choices used to discourage people from lingering or sleeping in certain areas. In turn, these decisions affect local and disabled residents who rely on accessible places to rest. To read more, please see the website below.<br><br>My solution came through EVAccess, a community-sponsored initiative that helps residents with mobility difficulties while supporting local businesses in making the East Village a more comfortable and accessible space.</a>
+                </div>
+            </div>
+            <div id="projectnavbtns">
+                <a class="projectnavbtn projectnavbtn-back" href="scrapped-ideas.html" data-project="Scrapped Ideas" aria-label="Previous project: Scrapped Ideas">&lt; BACK</a>
+                <a class="projectnavbtn projectnavbtn-next" href="inside-the-nypl.html" data-project="Inside the NYPL" aria-label="Next project: Inside the NYPL">NEXT &gt;</a>
+            </div>
+        </div>
+        <div id="right">
+            <div id="projectpageimages">
+                <div class="video-player">
+                    <video src="images/PublicSeatingDocumentary_compressed.mp4" poster="images/PublicSeatingThumbnail.png" controls playsinline></video>
+                    <div class="video-controls" hidden>
+                        <button type="button" class="video-play" aria-label="Play" title="Play"><i data-lucide="play"></i></button>
+                        <input class="video-seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Video position">
+                        <button type="button" class="video-mute" aria-label="Mute" title="Mute"><i data-lucide="volume-2"></i></button>
+                        <input class="video-volume" type="range" min="0" max="1" value="1" step="0.01" aria-label="Volume">
+                        <button type="button" class="video-fullscreen" aria-label="Enter fullscreen" title="Enter fullscreen"><i data-lucide="maximize"></i></button>
+                    </div>
+                </div>
+                <img src="images/publicseatingposters.jpg">
+                <div class="dual-thesis-slideshow public-seating-slideshow">
+                    <section class="thesis-slideshow" data-prefix="images/publicseatingbook/evaccess" data-count="13" data-label="Public Seating">
+                        <div class="thesis-slide-frame">
+                            <img src="images/publicseatingbook/evaccess1.jpg" alt="Public Seating page 1">
+                        </div>
+                        <div class="thesis-slide-controls">
+                            <button type="button" class="thesis-slide-prev" aria-label="Previous Public Seating image" title="Previous image"><i data-lucide="chevron-left"></i></button>
+                            <div class="thesis-slideshow-header">
+                                <span>PUBLIC SEATING</span>
+                                <span class="thesis-slide-count" aria-live="polite">01 / 13</span>
+                            </div>
+                            <button type="button" class="thesis-slide-next" aria-label="Next Public Seating image" title="Next image"><i data-lucide="chevron-right"></i></button>
+                        </div>
+                    </section>
+                </div>
+                <img src="images/publicseatingpreview2.jpg">
+                <img src="images/publicseatingposters2.jpg">
+                <div class="video-player">
+                    <video src="images/PublicSeatingWebsite_compressed.mp4" controls playsinline></video>
+                    <div class="video-controls" hidden>
+                        <button type="button" class="video-play" aria-label="Play" title="Play"><i data-lucide="play"></i></button>
+                        <input class="video-seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Video position">
+                        <button type="button" class="video-mute" aria-label="Mute" title="Mute"><i data-lucide="volume-2"></i></button>
+                        <input class="video-volume" type="range" min="0" max="1" value="1" step="0.01" aria-label="Volume">
+                        <button type="button" class="video-fullscreen" aria-label="Enter fullscreen" title="Enter fullscreen"><i data-lucide="maximize"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
