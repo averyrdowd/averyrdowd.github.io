@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+	
+	<title>Project01-Dowd</title>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	
+	<style>
+		body {margin: 15px; padding: 20px; align-content: center;}
+		
+		#container {position: relative; display: flex; float: left; width: 100%; height: 100px;}
+		
+		#background-border {background: white; position: absolute; float: right; padding: 15px; border: dotted; border-width: 2px; width: 550px;}
+		
+		#hero {border: solid; border-width: 3px; border-color: black; margin: 2% 2%; position: relative; background-color: white; width: 525px;}
+		#hero-header {text-align: center; width: 100%; font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"; font-size: 50px; font-weight: bold; margin: 60px 0 0 0;}
+		#hero-subheader {font-size: 30px; font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"; font-weight: bold; text-align: center; margin: 0 0 0 0;}
+		
+		#profile-container { width: 100%; position: relative; float: left; margin: 0px 0 -40px 0}
+		#profile-text {width: 80%; font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"; font-size: 15px; font-weight: bold; position: relative; float: left; left: 35px; top: 9px;}
+		#profile-picture {background: url("images/profile.jpg"); background-size: contain; width: 25px; height: 25px; border-radius: 360px; float: left; left: 20px; top: 20px; position: relative;}
+		
+		#btn-container {width: 50%; align-content: center; position: relative; display: flex; margin: 30px 17% 30px 33%; float: left;}
+		#play-btn {background-image: url("images/dottedplay.png"); background-size: cover; height: 50px; width: 50px; border-radius: 360px; position: relative; margin: 0 5px;}
+		#pause-btn {background-image: url("images/dottedpause.png"); background-size: cover; height: 50px; width: 50px; border-radius: 360px; position: relative; margin: 0 5px;}
+		#stop-btn {background-image: url("images/dottedstop.png"); background-size: cover; height: 50px; width: 50px; border-radius: 360px; position: relative; margin: 0 5px;}
+		
+		#description-text {margin: 20px 40px 40px 40px;}
+		.hero-text-box {margin: 5px 0px; border-width: 10px; border-bottom: dashed; border-color: black; padding: 0px 0;}
+		.hero-text {margin: 3px 0 0px 0; font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"; font-weight: bold; font-size: 16px;}
+		.hero-sub {font-family: "Courier Prime"; font-size: 14px;}
+		
+		#tile-container {width: 100%; display: grid; grid-template-columns: 233px 233px 233px; padding: 3px; position: absolute; top: 15px; right: 20px; float: right; z-index: 2; margin: 0 0 0 10px; background-size: cover; width: 730px}	
+		.tile {height: 350px; background-size: cover; background-position: center; margin: 10px 0 30px 0; border-radius: 5px;}
+		.tile-title {position: relative; left: 10px; top: -5px; font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif"; font-size: 16px; font-weight: bold;}
+
+		#logo {height: 50px; margin: -10px 27% 5% 27%; position: relative; z-index: 3; bottom: 5px; display: flex;}
+		
+		.courier-prime-regular {
+  			font-family: "Courier Prime", serif;
+  			font-weight: 400;
+  			font-style: normal;
+		}
+		
+		/* CSS Interactive States */
+		
+		#t1:hover{color: #dac1a4; opacity: 1;}
+		#t1:active{box-shadow: inset 0 0 25px #dac1a4; transform: scale(1.03); z-index: 2;}
+		
+		#t2:hover{color: #bcc188; opacity: 1;}
+		#t2:active{box-shadow: inset 0 0 25px #bcc188; transform: scale(1.03); z-index: 2;}
+		
+		#t3:hover{color: #b8b0c7; opacity: 1;}
+		#t3:active{box-shadow: inset 0 0 25px #b8b0c7; transform: scale(1.03); z-index: 2;}
+		
+		#t4:hover{color: #c56739; opacity: 1;}
+		#t4:active{box-shadow: inset 0 0 25px #c56739; transform: scale(1.03); z-index: 2;}
+		
+		#t5:hover{color: #8eb6c9; opacity: 1;}
+		#t5:active{box-shadow: inset 0 0 25px #8eb6c9; transform: scale(1.03); z-index: 2;}
+		
+		#t6:hover{color: #eee5c2; opacity: 1;}
+		#t6:active{box-shadow: inset 0 0 25px #eee5c2; transform: scale(1.03); z-index: 2;}
+		
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<div id="background-border">
+			<div id="hero">
+				<div id="profile-container">
+					<div id="profile-picture">
+					</div>
+					<p id="profile-text">Welcome Avery</p>
+				</div>
+					<p id="hero-header">REPLICA</p>
+					<p id="hero-subheader">PICK YOUR SCENT, FIND <br> YOUR SOUND.</p>
+				<div id="btn-container">
+					<div id="pause-btn"></div>
+					<div id="play-btn"></div>
+					<div id="stop-btn"></div>
+				</div>
+				<div id="description-text">
+					<div class="hero-text-box">
+						<p class="hero-text">Now Playing:</p>
+						<p id="hero-subtext1" class="hero-sub">...</p>
+					</div>
+					<div class="hero-text-box">
+						<p class="hero-text">Scent:</p>
+						<p id="hero-subtext2" class="hero-sub">...</p>
+					</div>
+					<div class="hero-text-box">
+						<p class="hero-text">Fragrance Description:</p>
+						<p id="hero-subtext3" class="hero-sub">...</p>
+					</div>
+					<div class="hero-text-box">
+						<p class="hero-text">Style Description:</p>
+						<p id="hero-subtext4" class="hero-sub">...</p>
+					</div>
+				</div>
+					<div id="logo-container">
+						<div id="logo">
+							<img src="images/logo.png" alt="logo">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div id="tile-container">
+		<div class="tile" id="t1">
+			<p class="tile-title">INDIE</p>
+		</div>
+		<div class="tile" id="t2">
+			<p class="tile-title">FOLK</p>
+		</div>
+		<div class="tile" id="t3">
+			<p class="tile-title">ROCK</p>
+		</div>
+		<div class="tile" id="t4">
+			<p class="tile-title">ROMANCE</p>
+		</div>
+		<div class="tile" id="t5">
+			<p class="tile-title">TROPICAL</p>
+		</div>
+		<div class="tile" id="t6">
+			<p class="tile-title">FUNKY</p>
+		</div>
+		<div id="music-container">
+			<audio class="song">
+				<source src="audio/pic1.mp3">
+			</audio>
+			<audio class="song">
+				<source src="audio/pic2.mp3">
+			</audio>
+			<audio class="song">
+				<source src="audio/pic3.mp3">
+			</audio>
+			<audio class="song">
+				<source src="audio/pic4.mp3">
+			</audio>
+			<audio class="song">
+				<source src="audio/pic5.mp3">
+			</audio>
+			<audio class="song">
+				<source src="audio/pic6.mp3">
+			</audio>
+		</div>
+	</div>
+	<script>
+		const heroHeader = document.getElementById('hero-header')
+		const tileTitle = document.getElementsByClassName('tile-title')
+		const tile = document.getElementsByClassName('tile')
+		const border = document.getElementById('background-border')
+		const song = document.getElementsByClassName('song')
+		const playBtn = document.getElementById('play-btn')
+		const pauseBtn = document.getElementById('pause-btn')
+		const stopBtn = document.getElementById('stop-btn')
+		const heroSub1 = document.getElementById('hero-subtext1')
+		const heroSub2 = document.getElementById('hero-subtext2')
+		const heroSub3 = document.getElementById('hero-subtext3')
+		const heroSub4 = document.getElementById('hero-subtext4')
+		
+		var musicSelected = 1;
+
+		
+		playBtn.onmouseup = function(){song[eval(musicSelected-1)].play();}
+		stopBtn.onmouseup = function(){stopAllMusic()}
+		pauseBtn.onmouseup = function(){pauseAllMusic()}
+
+		function loadSong(r, t){
+			musicSelected = r
+			heroHeader.innerHTML = tileTitle[eval(musicSelected-1)].innerHTML
+			border.style.backgroundImage="url('images/"+ t +".jpg')"
+			stopAllMusic()
+			song[musicSelected - 1].play();
+		}
+		
+		tile[0].onmouseup = function(){
+			loadSong(1, "pic1")
+			heroSub1.innerHTML = "Golden Hour on the Shoreline"
+			heroSub2.innerHTML = "Beach Walk"
+			heroSub3.innerHTML = "Sun kissed salty skin"
+			heroSub4.innerHTML = "Memory in a fragrance"
+		}
+		tile[1].onmouseup = function(){
+			loadSong(2, "pic2")
+			heroSub1.innerHTML = "Echoes of a Sunlit Field"
+			heroSub2.innerHTML = "From the Garden"
+			heroSub3.innerHTML = "Earth and tomato leaves"
+			heroSub4.innerHTML = "Memory in a fragrance"
+		}
+		tile[2].onmouseup = function(){
+			loadSong(3, "pic3")
+			heroSub1.innerHTML = "Thunder After the Storm"
+			heroSub2.innerHTML = "When the Rain Stops"
+			heroSub3.innerHTML = "Fresh rain and sunrays"
+			heroSub4.innerHTML = "Memory in a fragrance"
+		}
+		tile[3].onmouseup = function(){
+			loadSong(4, "pic4")
+			heroSub1.innerHTML = "Letters from the Moonlight"
+			heroSub2.innerHTML = "Under the Stars"
+			heroSub3.innerHTML = "Oud and leather"
+			heroSub4.innerHTML = "Memory in a fragrance"
+		}
+		tile[4].onmouseup = function(){
+			loadSong(5, "pic5")
+			heroSub1.innerHTML = "Breeze on the Horizon"
+			heroSub2.innerHTML = " Sailing Day"
+			heroSub3.innerHTML = "Aquatic deep sea"
+			heroSub4.innerHTML = "Memory in a fragrance"
+		}
+		tile[5].onmouseup = function(){
+			loadSong(6, "pic6")
+			heroSub1.innerHTML = "Groove in the Golden Hour"
+			heroSub2.innerHTML = "Afternoon Delight"
+			heroSub3.innerHTML = "Warm vanilla madeline"
+			heroSub4.innerHTML = "Memory in a fragrance"
+		}
+		
+		function loadTiles (){
+			tile[0].style.backgroundImage="url('images/purfume3.webp')"
+			tile[1].style.backgroundImage="url('images/purfume1.webp')"
+			tile[2].style.backgroundImage="url('images/purfume2.webp')"
+			tile[3].style.backgroundImage="url('images/purfume4.webp')"
+			tile[4].style.backgroundImage="url('images/purfume5.webp')"
+			tile[5].style.backgroundImage="url('images/purfume6.webp')"
+		}
+		
+		function pauseAllMusic(){
+			song[0].pause();
+			song[1].pause();
+			song[2].pause();
+			song[3].pause();
+			song[4].pause();
+			song[5].pause();
+		}
+		
+		function stopAllMusic(){
+			song[0].pause(); song[0].currentTime = 0;
+			song[1].pause(); song[1].currentTime = 0;
+			song[2].pause(); song[2].currentTime = 0;
+			song[3].pause(); song[3].currentTime = 0;
+			song[4].pause(); song[4].currentTime = 0;
+			song[5].pause(); song[5].currentTime = 0;
+		}
+		
+		loadTiles()
+	</script>
+</body>
+</html>
